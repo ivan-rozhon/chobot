@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "precommit": "lint-staged"
   },
   "private": true,
   "dependencies": {
@@ -43,6 +44,7 @@
     "@types/jasminewd2": "2.0.3",
     "@types/node": "10.1.2",
     "codelyzer": "4.3.0",
+    "husky": "0.14.3",
     "jasmine-core": "2.99.1",
     "jasmine-spec-reporter": "4.2.1",
     "karma": "1.7.1",
@@ -50,9 +52,46 @@
     "karma-coverage-istanbul-reporter": "1.4.2",
     "karma-jasmine": "1.1.1",
     "karma-jasmine-html-reporter": "0.2.2",
+    "lint-staged": "7.1.1",
+    "prettier": "1.12.1",
+    "prettier-stylelint": "0.4.2",
     "protractor": "5.3.0",
+    "stylelint": "9.2.1",
+    "stylelint-config-concentric-order": "3.3.1",
+    "stylelint-config-standard": "18.2.0",
     "ts-node": "6.0.3",
     "tslint": "5.10.0",
+    "tslint-config-prettier": "1.13.0",
     "typescript": "2.7.2"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-concentric-order",
+      "./node_modules/prettier-stylelint/config.js"
+    ],
+    "rules": {
+      "at-rule-no-unknown": null,
+      "selector-type-no-unknown": null
+    }
+  },
+  "lint-staged": {
+    "{src,e2e}/**/*.{ts,tsx,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "{src,e2e}/**/*.scss": [
+      "prettier-stylelint --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
