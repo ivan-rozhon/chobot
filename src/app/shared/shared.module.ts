@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { MatSidenavModule } from '@angular/material';
 
-import { LayoutComponent } from './layout/layout.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
+// app components
+import { LayoutComponent } from './components/layout/layout.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @NgModule({
   imports: [CommonModule, MatSidenavModule],
