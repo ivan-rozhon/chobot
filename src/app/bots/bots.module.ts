@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
+import { SharedModule } from './../shared/shared.module';
 import { BotsRoutingModule } from './bots-routing.module';
 
-// containers
+// components
 import { BotsComponent } from './containers/bots.component';
 
 @NgModule({
-  imports: [CommonModule, BotsRoutingModule],
+  imports: [SharedModule, BotsRoutingModule],
   declarations: [BotsComponent]
 })
 export class BotsModule {}

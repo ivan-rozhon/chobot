@@ -1,9 +1,7 @@
 <mat-sidenav-container>
   <mat-sidenav opened mode="side">
     <mat-nav-list>
-      <a mat-list-item href="#">Dashboard</a>
-      <a mat-list-item href="#">Bots</a>
-      <a mat-list-item href="#">Portfolio</a>
+      <ng-content select="cc-nav-item"></ng-content>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

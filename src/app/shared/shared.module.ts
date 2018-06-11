@@ -8,7 +8,8 @@ import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToo
 import { LayoutComponent } from './components/layout/layout.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { NavItemComponent } from './components/nav-item/nav-item.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatSidenavModule,
     MatToolbarModule
   ],
-  declarations: [LayoutComponent, SidenavComponent, PageNotFoundComponent, ToolbarComponent],
+  declarations: [LayoutComponent, SidenavComponent, PageNotFoundComponent, ToolbarComponent, NavItemComponent],
   exports: [
     // '@angular/material
     MatButtonModule,
@@ -32,7 +33,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     LayoutComponent,
     SidenavComponent,
     PageNotFoundComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    NavItemComponent
   ]
 })
 export class SharedModule {}

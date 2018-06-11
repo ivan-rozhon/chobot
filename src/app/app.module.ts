@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // app modules
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+// import { BotsModule } from './bots/bots.module';
 import { AppRoutingModule } from './app-routing.module';
 
 // app components
@@ -18,6 +19,7 @@ import { AppComponent } from './app.component';
     // app modules
     CoreModule,
     SharedModule,
+    // BotsModule,
     AppRoutingModule
   ],
   providers: [],
