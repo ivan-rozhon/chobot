@@ -1,0 +1,64 @@
+/* latin - roboto - regular */
+@font-face {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  src: local('Roboto'), local('Roboto-Regular'), url('/assets/fonts/roboto/font/Roboto-Regular.woff') format('woff'),
+    url('/assets/fonts/roboto/font/Roboto-Regular.woff2') format('woff2'),
+    url('/assets/fonts/roboto/font/Roboto-Regular.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* latin-ext - roboto - regular */
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Roboto'), local('Roboto-Regular'),
+    url('/assets/fonts/roboto/font/Roboto-Regular-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin - roboto - medium */
+@font-face {
+  font-family: Roboto;
+  font-weight: 500;
+  font-style: normal;
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+    url('/assets/fonts/roboto/font/Roboto-Medium.woff') format('woff'),
+    url('/assets/fonts/roboto/font/Roboto-Medium.woff2') format('woff2'),
+    url('/assets/fonts/roboto/font/Roboto-Medium.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* latin-ext - roboto - medium */
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+    url('/assets/fonts/roboto/font/Roboto-Medium-ext.woff') format('woff'),
+    url('/assets/fonts/roboto/font/Roboto-Medium-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin - roboto - bold */
+@font-face {
+  font-family: Roboto;
+  font-weight: 700;
+  font-style: normal;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('/assets/fonts/roboto/font/Roboto-Bold.woff') format('woff'),
+    url('/assets/fonts/roboto/font/Roboto-Bold.woff2') format('woff2'),
+    url('/assets/fonts/roboto/font/Roboto-Bold.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* latin-ext - roboto - bold */
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+    url('/assets/fonts/roboto/font/Roboto-Bold-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}

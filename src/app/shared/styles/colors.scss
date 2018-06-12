@@ -1,0 +1,55 @@
+// ======================
+// GLOBAL APP SCSS COLORS
+// ======================
+
+@import '~@angular/material/theming';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// primary...
+$cc-color-primary: #283493;
+$cc-color-primary-light: #5f5ec4;
+$cc-color-primary-dark: #000f64;
+// ...and secondary app colors
+$cc-color-secondary: #000936;
+$cc-color-secondary-light: #2d3160;
+$cc-color-secondary-dark: #000013;
+
+$cc-color-white: #fff;
+
+// define custom 'material' colors
+// - primary
+$cc-color-primary-mat: (
+  100: $cc-color-primary-light,
+  500: $cc-color-primary,
+  700: $cc-color-primary-dark,
+  contrast: (
+    100: $cc-color-white,
+    500: $cc-color-white,
+    700: $cc-color-white
+  )
+);
+// - secondary
+$cc-color-secondary-mat: (
+  100: $cc-color-secondary-light,
+  500: $cc-color-secondary,
+  700: $cc-color-secondary-dark,
+  contrast: (
+    100: $cc-color-white,
+    500: $cc-color-white,
+    700: $cc-color-white
+  )
+);
+$cc-mat-theme-primary: mat-palette($cc-color-primary-mat, 500, 100, 700);
+$cc-mat-theme-accent: mat-palette($cc-color-secondary-mat, 500, 100, 700);
+// The warn palette is optional (defaults to red).
+$cc-mat-them-warn: mat-palette($mat-red);
+// Create the theme object (a Sass map containing all of the palettes).
+$cc-mat-theme: mat-light-theme($cc-mat-theme-primary, $cc-mat-theme-accent, $cc-mat-them-warn);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($cc-mat-theme);
