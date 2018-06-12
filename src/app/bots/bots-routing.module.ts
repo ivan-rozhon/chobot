@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { BotsComponent } from './containers/bots.component';
+import { BotsComponent } from '@bots/containers/bots.component';
 
 const routes: Routes = [{ path: '', component: BotsComponent }];
 

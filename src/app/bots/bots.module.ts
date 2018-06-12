@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 
-import { SharedModule } from './../shared/shared.module';
-import { BotsRoutingModule } from './bots-routing.module';
+// modules
+import { SharedModule } from '@shared/shared.module';
+import { BotsRoutingModule } from '@bots/bots-routing.module';
 
 // components
-import { BotsComponent } from './containers/bots.component';
+import { BotsComponent } from '@bots/containers/bots.component';
 
 @NgModule({
   imports: [SharedModule, BotsRoutingModule],
