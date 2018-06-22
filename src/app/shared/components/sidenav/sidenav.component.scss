@@ -1,9 +1,12 @@
+@import 'general';
+
 :host {
   display: flex;
   flex: 1;
 }
 
 mat-sidenav {
+  background-color: $cc-color-secondary;
   width: 200px;
 }
 

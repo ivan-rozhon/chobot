@@ -1,0 +1,11 @@
+@import 'general';
+
+:host {
+  @include mat-elevation(6);
+
+  z-index: 100;
+}
+
+.toolbar-title {
+  margin-left: $cc-space;
+}

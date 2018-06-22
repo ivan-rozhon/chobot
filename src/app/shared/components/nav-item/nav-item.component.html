@@ -1,3 +1,6 @@
-<a mat-list-item>
-  <ng-content></ng-content>
+<a mat-list-item [class.active]="router.isActive(routerLink)">
+  <mat-icon mat-list-icon [svgIcon]="icon"></mat-icon>
+  <span mat-line>
+    <ng-content></ng-content>
+  </span>
 </a>

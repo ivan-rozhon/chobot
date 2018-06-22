@@ -1,0 +1,10 @@
+@import 'general';
+
+[mat-list-item] {
+  color: mat-color($mat-gray, 500, 1);
+
+  &.active {
+    background-color: $cc-color-primary;
+    color: $cc-color-white;
+  }
+}
