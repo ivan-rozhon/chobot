@@ -1,6 +1,6 @@
-// ===============================
-// GLOBAL CONTAINER FOR APP STYLES
-// ===============================
+// ===========================================
+// GLOBAL CONTAINER FOR APP STYLES (VARIABLES)
+// ===========================================
 
-@import './colors';
-@import './fonts';
+@import '~@angular/material/theming';
+@import 'variables';

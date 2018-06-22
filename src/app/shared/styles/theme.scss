@@ -1,24 +1,13 @@
-// ======================
-// GLOBAL APP SCSS COLORS
-// ======================
+// ==============
+// MATERIAL THEME
+// ==============
 
-@import '~@angular/material/theming';
+@import 'general';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat-core();
-
-// primary...
-$cc-color-primary: #283493;
-$cc-color-primary-light: #5f5ec4;
-$cc-color-primary-dark: #000f64;
-// ...and secondary app colors
-$cc-color-secondary: #000936;
-$cc-color-secondary-light: #2d3160;
-$cc-color-secondary-dark: #000013;
-
-$cc-color-white: #fff;
 
 // define custom 'material' colors
 // - primary

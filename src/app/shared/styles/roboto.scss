@@ -1,0 +1,13 @@
+@import 'variables';
+
+// ===
+// Roboto font | https://fonts.google.com/specimen/Roboto
+// ===
+// import roboto font style sheet
+@import './assets/fonts/roboto/roboto.css';
+
+// use roboto font and set default (wheat) background
+body {
+  font-family: Roboto, sans-serif;
+  font-size: $cc-font-size;
+}

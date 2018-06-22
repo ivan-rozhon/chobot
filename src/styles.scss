@@ -1,6 +1,19 @@
-// general global app scss styles and variables
-@import 'general';
+/* You can add global styles to this file, and also import other style files */
+
+// Normalize.css | https://necolas.github.io/normalize.css/
+@import '~normalize.css/normalize.css';
+
+// global shared app scss styles and variables
+@import 'theme';
+@import 'spinner';
+@import 'roboto';
+@import 'mdi';
 
 body {
   margin: 0;
+}
+
+html,
+body {
+  height: 100%;
 }

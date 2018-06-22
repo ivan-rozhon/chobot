@@ -3,7 +3,24 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  // this variable is for application internal settings
+  production: false,
+
+  // it sets path after /#/ sign
+  // example: '/#/{href}/...'
+  href: '',
+
+  // context root of application
+  contextRoot: '',
+
+  // path to application`s assets (config, images,...)
+  assets: '',
+
+  // define a host`s URL (if blank '', it will be relative)
+  host: '',
+
+  // REST API path
+  api: ''
 };
 
 /*

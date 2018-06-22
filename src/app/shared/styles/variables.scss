@@ -1,0 +1,42 @@
+// COLORS
+// ======
+// primary...
+$cc-color-primary: #283493;
+$cc-color-primary-light: #5f5ec4;
+$cc-color-primary-dark: #000f64;
+// ...and secondary app colors
+$cc-color-secondary: #000936;
+$cc-color-secondary-light: #2d3160;
+$cc-color-secondary-dark: #000013;
+
+// other colors
+$cc-color-white: #fff;
+$cc-color-black: #000;
+// ======
+
+// FONTS
+// =====
+// weight
+$cc-font-normal: 400;
+$cc-font-bold: 500;
+$cc-font-bold-heavy: 700;
+
+// size
+$cc-font-size: 14px;
+$cc-font-size-s: $cc-font-size - 2px;
+$cc-font-size-xs: $cc-font-size-s - 2px;
+$cc-font-size-xxs: $cc-font-size-xs - 2px;
+$cc-font-size-l: $cc-font-size + 2px;
+$cc-font-size-xl: $cc-font-size-l + 2px;
+$cc-font-size-xxl: $cc-font-size-xl + 2px;
+// =====
+
+// SPACING
+// =======
+// space
+$cc-space: 16px;
+$cc-space-s: $cc-space / 2;
+$cc-space-xs: $cc-space-s / 2;
+$cc-space-l: $cc-space * 2;
+$cc-space-xl: $cc-space-l * 2;
+// =======
