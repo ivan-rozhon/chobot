@@ -40,4 +40,9 @@ $cc-space-s: $cc-space / 2;
 $cc-space-xs: $cc-space-s / 2;
 $cc-space-l: $cc-space * 2;
 $cc-space-xl: $cc-space-l * 2;
+// -- mid-spaces
+$cc-space-mid-s: $cc-space - $cc-space-s / 2; // (12px)
+$cc-space-mid-xs: $cc-space-mid-s / 2; // (6px)
+$cc-space-mid-l: $cc-space + $cc-space-s; // (24px)
+$cc-space-mid-xl: $cc-space-mid-l * 2; // (48px)
 // =======

@@ -1,0 +1,7 @@
+@import 'general';
+
+:host {
+  display: flex;
+  flex: 1;
+  padding: $cc-space;
+}
