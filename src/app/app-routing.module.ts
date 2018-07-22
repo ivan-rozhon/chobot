@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: 'app/dashboard/dashboard.module#DashboardModule'
   },
   {
+    path: 'portfolio',
+    loadChildren: 'app/portfolio/portfolio.module#PortfolioModule'
+  },
+  {
     path: 'bots',
     loadChildren: 'app/bots/bots.module#BotsModule'
   },

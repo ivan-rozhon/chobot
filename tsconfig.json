@@ -16,7 +16,8 @@
       "@core/*": ["./app/core/*"],
       "@shared/*": ["./app/shared/*"],
       "@bots/*": ["./app/bots/*"],
-      "@dashboard/*": ["./app/dashboard/*"]
+      "@dashboard/*": ["./app/dashboard/*"],
+      "@portfolio/*": ["./app/portfolio/*"]
     }
   }
 }
