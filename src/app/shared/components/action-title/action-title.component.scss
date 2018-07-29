@@ -1,0 +1,12 @@
+@import 'general';
+
+:host {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $cc-space;
+  color: $cc-color-primary;
+  font-size: $cc-font-size-xxl;
+  font-weight: $cc-font-bold-heavy;
+}

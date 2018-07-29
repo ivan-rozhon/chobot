@@ -47,6 +47,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
+import { ActionTitleComponent } from './components/action-title/action-title.component';
 
 @NgModule({
   imports: [
@@ -91,7 +92,14 @@ import { NavItemComponent } from './components/nav-item/nav-item.component';
     MatTooltipModule,
     MatTreeModule
   ],
-  declarations: [LayoutComponent, SidenavComponent, PageNotFoundComponent, ToolbarComponent, NavItemComponent],
+  declarations: [
+    LayoutComponent,
+    SidenavComponent,
+    PageNotFoundComponent,
+    ToolbarComponent,
+    NavItemComponent,
+    ActionTitleComponent
+  ],
   exports: [
     // @angular
     CommonModule,
@@ -138,7 +146,8 @@ import { NavItemComponent } from './components/nav-item/nav-item.component';
     SidenavComponent,
     PageNotFoundComponent,
     ToolbarComponent,
-    NavItemComponent
+    NavItemComponent,
+    ActionTitleComponent
   ]
 })
 export class SharedModule {}

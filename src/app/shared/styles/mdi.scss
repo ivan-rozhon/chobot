@@ -12,3 +12,10 @@ a.mat-menu-item > mat-icon {
   width: 24px;
   height: 24px;
 }
+
+.mat-button {
+  span + .mat-icon,
+  .mat-icon + span {
+    margin-left: 6px;
+  }
+}

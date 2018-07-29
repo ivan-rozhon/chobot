@@ -1,12 +1,10 @@
-<div class="action-title">
+<cc-action-title>
   Exchanges
-  <div>
-    <button mat-button color="primary">
-      Connect new exchange
-      <mat-icon svgIcon="plus-circle-outline"></mat-icon>
-    </button>
-  </div>
-</div>
+  <button mat-button color="primary">
+    <span>Connect new exchange</span>
+    <mat-icon svgIcon="plus-circle-outline"></mat-icon>
+  </button>
+</cc-action-title>
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="exchanges">
