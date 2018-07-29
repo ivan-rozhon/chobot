@@ -1,0 +1,21 @@
+@import 'general';
+
+:host {
+  flex: 1;
+}
+
+table {
+  width: 100%;
+}
+
+// TODO: component 'cc-action-title'
+.action-title {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $cc-space;
+  color: $cc-color-primary;
+  font-size: $cc-font-size-xxl;
+  font-weight: $cc-font-bold-heavy;
+}
