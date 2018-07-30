@@ -1,5 +1,13 @@
 import { NgModule } from '@angular/core';
 
+// @ngrx
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+
+// state
+import { reducers } from '@portfolio/portfolio.state';
+import { ExchangeEffects } from '@portfolio/state/exchange.effects';
+
 // modules
 import { SharedModule } from '@shared/shared.module';
 import { PortfolioRoutingModule } from '@portfolio/portfolio-routing.module';
@@ -13,7 +21,14 @@ import { ExchangeConfigComponent } from '@portfolio/containers/exchange-config/e
 import { ExchangeListComponent } from './components/exchange-list/exchange-list.component';
 
 @NgModule({
-  imports: [SharedModule, PortfolioRoutingModule],
+  imports: [
+    // @ngrx
+    StoreModule.forFeature('portfolio', reducers),
+    EffectsModule.forFeature([ExchangeEffects]),
+    // modules
+    SharedModule,
+    PortfolioRoutingModule
+  ],
   declarations: [
     // containers
     PortfolioPageComponent,

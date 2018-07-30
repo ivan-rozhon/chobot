@@ -9,7 +9,7 @@ import { Exchange } from '@portfolio/portfolio.model';
 })
 export class ExchangeListComponent {
   exchanges: Exchange[];
-  displayedColumns: string[] = ['exchange', 'balance', 'actions'];
+  displayedColumns: string[] = ['exchange', 'balanceBtc', 'balanceUsd', 'start', 'min', 'max', 'actions'];
 
   constructor() {
     // TODO: remove (mock)
