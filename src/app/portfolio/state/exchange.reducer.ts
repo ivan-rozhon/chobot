@@ -1,7 +1,5 @@
-import { Action } from '@ngrx/store';
-
 import { Exchange } from '@portfolio/portfolio.model';
-import { ExchangeActions } from '@portfolio/state/exchange.actions';
+import { ExchangeActions, ExchangeActionTypes } from '@portfolio/state/exchange.actions';
 
 export interface State {
   exchanges: Exchange[];
@@ -15,6 +13,32 @@ export const initialState: State = {
 
 export function reducer(state = initialState, action: ExchangeActions): State {
   switch (action.type) {
+    // LOAD EXCHANGE LIST
+    // ===
+    case ExchangeActionTypes.LoadList: {
+      return {
+        ...state,
+        exchangesLoading: true
+      };
+    }
+
+    case ExchangeActionTypes.LoadListComplete: {
+      return {
+        ...state,
+        exchangesLoading: false,
+        exchanges: action.payload
+      };
+    }
+
+    case ExchangeActionTypes.LoadListFail: {
+      return {
+        ...state,
+        exchangesLoading: false,
+        exchanges: initialState.exchanges
+      };
+    }
+    // ===
+
     default:
       return state;
   }

@@ -12,6 +12,9 @@ import { ExchangeEffects } from '@portfolio/state/exchange.effects';
 import { SharedModule } from '@shared/shared.module';
 import { PortfolioRoutingModule } from '@portfolio/portfolio-routing.module';
 
+// services
+import { PortfolioService } from '@portfolio/portfolio.service';
+
 // containers
 import { PortfolioPageComponent } from '@portfolio/containers/portfolio-page/portfolio-page.component';
 import { ExchangeComponent } from '@portfolio/containers/exchange/exchange.component';
@@ -35,6 +38,7 @@ import { ExchangeListComponent } from './components/exchange-list/exchange-list.
     ExchangeComponent,
     ExchangeConfigComponent,
     ExchangeListComponent
-  ]
+  ],
+  providers: [PortfolioService]
 })
 export class PortfolioModule {}
