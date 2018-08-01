@@ -17,3 +17,12 @@ export const reducers: ActionReducerMap<PortfolioState> = {
 
 // createFeatureSelector function selects a piece of state from the root of the state object
 export const getPortfolioState = createFeatureSelector<PortfolioState>('portfolio');
+
+// Exchange
+// ===
+// -- Exchange State
+export const getExchangeState = createSelector(getPortfolioState, (state: PortfolioState) => state.exchange);
+
+export const getExchanges = createSelector(getExchangeState, fromExchange.getExchanges);
+export const getExchangesLoading = createSelector(getExchangeState, fromExchange.getExchangesLoading);
+// ===

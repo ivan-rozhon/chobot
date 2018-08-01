@@ -10,3 +10,11 @@
   font-size: $cc-font-size-xxl;
   font-weight: $cc-font-bold-heavy;
 }
+
+:host /deep/ {
+  .actions {
+    button:not(:last-child) {
+      margin-right: $cc-space-s;
+    }
+  }
+}

@@ -4,6 +4,7 @@ export interface Exchange {
   apiKey: string;
   apiSecret: string;
   performance: ExchangePerformance;
+  balance: ExchangeBalance;
 }
 
 export interface ExchangePerformance {
@@ -13,4 +14,14 @@ export interface ExchangePerformance {
   minDate: Date;
   maxValue: string;
   maxDate: Date;
+}
+
+export interface ExchangeBalance {
+  date: Date;
+  valueBtc: number;
+  changeBtc: number;
+  changeBtcPerc: number;
+  valueUsd: number;
+  changeUsd: number;
+  changeUsdPerc: number;
 }

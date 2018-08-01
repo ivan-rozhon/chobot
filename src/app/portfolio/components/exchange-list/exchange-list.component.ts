@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Exchange } from '@portfolio/portfolio.model';
 
@@ -8,11 +8,12 @@ import { Exchange } from '@portfolio/portfolio.model';
   styleUrls: ['./exchange-list.component.scss']
 })
 export class ExchangeListComponent {
-  exchanges: Exchange[];
   displayedColumns: string[] = ['exchange', 'balanceBtc', 'balanceUsd', 'start', 'min', 'max', 'actions'];
 
-  constructor() {
-    // TODO: remove (mock)
-    this.exchanges = [{ name: 'Binance', performance: { startValue: '0.234' } }] as Exchange[];
-  }
+  @Input()
+  exchanges: Exchange[];
+  @Input()
+  loading: boolean;
+
+  constructor() {}
 }

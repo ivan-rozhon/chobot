@@ -4,6 +4,8 @@ import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpResponse } fr
 import { Observable, of } from 'rxjs';
 import { mergeMap, delay, materialize, dematerialize } from 'rxjs/operators';
 
+import { exchangeList } from '@shared/mocks/exchanges';
+
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
   constructor() {}
@@ -15,7 +17,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
           mergeMap(() => {
             // GET /exchangeList
             if (request.url.endsWith('exchangeList') && request.method === 'GET') {
-              return of(new HttpResponse({ status: 200, body: [] }));
+              return of(new HttpResponse({ status: 200, body: exchangeList() }));
             }
 
             // pass through any requests not handled above

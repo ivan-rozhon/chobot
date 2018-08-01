@@ -43,3 +43,6 @@ export function reducer(state = initialState, action: ExchangeActions): State {
       return state;
   }
 }
+
+export const getExchanges = (state: State) => state.exchanges;
+export const getExchangesLoading = (state: State) => state.exchangesLoading;

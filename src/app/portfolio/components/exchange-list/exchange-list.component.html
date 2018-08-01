@@ -1,12 +1,14 @@
 <cc-action-title>
   Exchanges
-  <button mat-button color="primary">
+  <button mat-button color="primary" [routerLink]="['exchange-config']">
     <span>Connect new exchange</span>
     <mat-icon svgIcon="plus-circle-outline"></mat-icon>
   </button>
 </cc-action-title>
 
 <div class="mat-elevation-z6">
+  <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
   <table mat-table [dataSource]="exchanges">
     <ng-container matColumnDef="exchange">
       <th mat-header-cell *matHeaderCellDef>Exchange</th>
@@ -15,27 +17,52 @@
 
     <ng-container matColumnDef="balanceBtc">
       <th mat-header-cell *matHeaderCellDef>Balance in BTC</th>
-      <td mat-cell *matCellDef="let element">{{ element.performance.startValue }}</td>
+      <td mat-cell *matCellDef="let element">
+        {{ element.balance.valueBtc }}
+        <div>
+          {{ element.balance.changeBtcPerc }} {{ element.balance.changeBtc }}
+        </div>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="balanceUsd">
       <th mat-header-cell *matHeaderCellDef>Balance in USD</th>
-      <td mat-cell *matCellDef="let element">{{ element.performance.startValue }}</td>
+      <td mat-cell *matCellDef="let element">
+        {{ element.balance.valueUsd }}
+        <div>
+          {{ element.balance.changeUsdPerc }} {{ element.balance.changeUsd }}
+        </div>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="start">
       <th mat-header-cell *matHeaderCellDef>Start</th>
-      <td mat-cell *matCellDef="let element">{{ element.performance.startValue }}</td>
+      <td mat-cell *matCellDef="let element">
+        {{ element.performance.startValue }}
+        <div>
+          {{ element.performance.startDate | date }}
+        </div>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="min">
       <th mat-header-cell *matHeaderCellDef>Min</th>
-      <td mat-cell *matCellDef="let element">{{ element.performance.startValue }}</td>
+      <td mat-cell *matCellDef="let element">
+        {{ element.performance.minValue }}
+        <div>
+          {{ element.performance.minDate | date }}
+        </div>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="max">
       <th mat-header-cell *matHeaderCellDef>Max</th>
-      <td mat-cell *matCellDef="let element">{{ element.performance.startValue }}</td>
+      <td mat-cell *matCellDef="let element">
+        {{ element.performance.maxValue }}
+        <div>
+          {{ element.performance.maxDate | date }}
+        </div>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="actions">
@@ -46,18 +73,21 @@
         </button>
 
         <button mat-icon-button color="primary">
+          <mat-icon svgIcon="refresh"></mat-icon>
+        </button>
+
+        <button mat-icon-button color="primary">
           <mat-icon svgIcon="delete"></mat-icon>
         </button>
 
         <button mat-raised-button color="warn">Sell to BTC</button>
+        <button mat-raised-button color="warn">Sell to USD</button>
       </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
-  <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
 
   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>

@@ -6,16 +6,14 @@
 
 table {
   width: 100%;
-}
 
-// TODO: component 'cc-action-title'
-.action-title {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: $cc-space;
-  color: $cc-color-primary;
-  font-size: $cc-font-size-xxl;
-  font-weight: $cc-font-bold-heavy;
+  // minimize 'actions' column
+  .mat-column-actions {
+    width: 1%;
+    white-space: nowrap;
+
+    button:not(:last-child) {
+      margin-right: $cc-space-s;
+    }
+  }
 }
