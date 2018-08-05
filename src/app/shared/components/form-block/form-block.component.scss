@@ -1,12 +1,10 @@
 @import 'general';
 
-:host {
+cc-form-block {
   display: flex;
   flex-flow: row wrap;
   margin: 0 (-$cc-space);
-}
 
-:host /deep/ {
   mat-form-field {
     padding: 0 $cc-space;
   }

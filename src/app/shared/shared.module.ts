@@ -50,6 +50,10 @@ import { NavItemComponent } from './components/nav-item/nav-item.component';
 import { ActionTitleComponent } from './components/action-title/action-title.component';
 import { FormContainerComponent } from './components/form-container/form-container.component';
 import { FormBlockComponent } from './components/form-block/form-block.component';
+import { FormColumnComponent } from './components/form-column/form-column.component';
+
+// directives
+// ...
 
 @NgModule({
   imports: [
@@ -95,6 +99,7 @@ import { FormBlockComponent } from './components/form-block/form-block.component
     MatTreeModule
   ],
   declarations: [
+    // components
     LayoutComponent,
     SidenavComponent,
     PageNotFoundComponent,
@@ -102,7 +107,10 @@ import { FormBlockComponent } from './components/form-block/form-block.component
     NavItemComponent,
     ActionTitleComponent,
     FormContainerComponent,
-    FormBlockComponent
+    FormBlockComponent,
+    FormColumnComponent
+    // directives
+    // ...
   ],
   exports: [
     // @angular
@@ -153,7 +161,10 @@ import { FormBlockComponent } from './components/form-block/form-block.component
     NavItemComponent,
     ActionTitleComponent,
     FormContainerComponent,
-    FormBlockComponent
+    FormBlockComponent,
+    FormColumnComponent
+    // directives
+    // ...
   ]
 })
 export class SharedModule {}

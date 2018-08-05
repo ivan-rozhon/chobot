@@ -1,0 +1,22 @@
+@import 'variables';
+
+// ============================
+// FORM CONTAINER/BLOCK/COLUMNS
+// ============================
+
+// Calculate width of form column according to number of columns
+// @param $columns-number Number of columns in form-block.
+// @param $column-min-width Min width of column. (default 180px)
+@mixin cc-form-columns($columns-number, $column-min-width: 180px) {
+  // calculate percentage width of column according to number of columns
+  $column-perc: percentage(1 / $columns-number);
+  // calculate real width of column including paddings
+  $column-width: calc(#{$column-perc} - 2 * #{$cc-space});
+
+  & > mat-form-field {
+    width: $column-width;
+    min-width: $column-min-width;
+  }
+}
+
+// ============================

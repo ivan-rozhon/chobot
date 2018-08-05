@@ -1,3 +1,4 @@
+// ======
 // COLORS
 // ======
 // primary...
@@ -15,6 +16,7 @@ $cc-color-black: #000;
 $cc-color-gray95: #f2f2f2;
 // ======
 
+// =====
 // FONTS
 // =====
 // weight
@@ -35,6 +37,7 @@ $cc-font-size-xxxl: 1.875rem; // (30px)
 $cc-font-size-xxxxl: 2rem; // (32px)
 // =====
 
+// =======
 // SPACING
 // =======
 // space
@@ -49,3 +52,9 @@ $cc-space-mid-xs: $cc-space-mid-s / 2; // (6px)
 $cc-space-mid-l: $cc-space + $cc-space-s; // (24px)
 $cc-space-mid-xl: $cc-space-mid-l * 2; // (48px)
 // =======
+
+// ============================
+// FORM CONTAINER/BLOCK/COLUMNS
+// ============================
+$form-columns: 12;
+// ============================

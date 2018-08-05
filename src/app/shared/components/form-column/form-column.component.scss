@@ -1,0 +1,8 @@
+cc-form-column {
+  display: flex;
+
+  mat-form-field {
+    flex: 1;
+    min-width: 180px;
+  }
+}

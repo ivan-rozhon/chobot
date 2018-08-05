@@ -1,6 +1,6 @@
 @import 'general';
 
-:host {
+cc-action-title {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -9,9 +9,7 @@
   color: $cc-color-primary;
   font-size: $cc-font-size-xxl;
   font-weight: $cc-font-bold-heavy;
-}
 
-:host /deep/ {
   .actions {
     button:not(:last-child) {
       margin-right: $cc-space-s;

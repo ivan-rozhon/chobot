@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'mixins';
+
+// ============================
+// FORM CONTAINER/BLOCK/COLUMNS
+// ============================
+
+// generate form columns classes
+.cc-form-container {
+  .cc-form-block {
+    @for $i from 1 through $form-columns {
+      &.cc-form-columns-#{$i} {
+        @include cc-form-columns($i);
+      }
+    }
+  }
+}
+
+// ============================

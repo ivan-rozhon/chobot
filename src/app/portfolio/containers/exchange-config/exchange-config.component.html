@@ -12,22 +12,25 @@
 <mat-card>
   <form [formGroup]="configForm">
     <cc-form-container>
-      <cc-form-block>
-        <mat-form-field>
-          <input matInput placeholder="Name" formControlName="name" required>
-        </mat-form-field>
+      <cc-form-block columns="3">
+        <cc-form-column columnsPart="2">
+          <mat-form-field>
+            <input matInput placeholder="Name" formControlName="name" required>
+          </mat-form-field>
+        </cc-form-column>
+
         <mat-form-field>
           <input matInput placeholder="Exchange" formControlName="exchange" required>
         </mat-form-field>
       </cc-form-block>
 
-      <cc-form-block>
+      <cc-form-block columns="1">
         <mat-form-field>
           <input matInput placeholder="Api key" formControlName="apiKey" required>
         </mat-form-field>
       </cc-form-block>
 
-      <cc-form-block>
+      <cc-form-block columns="1">
         <mat-form-field>
           <input matInput placeholder="Secret key" formControlName="apiSecret" required>
         </mat-form-field>
