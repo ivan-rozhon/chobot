@@ -1,0 +1,7 @@
+@import 'general';
+
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: $cc-space-s $cc-space;
+}

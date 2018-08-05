@@ -48,6 +48,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
 import { ActionTitleComponent } from './components/action-title/action-title.component';
+import { FormContainerComponent } from './components/form-container/form-container.component';
+import { FormBlockComponent } from './components/form-block/form-block.component';
 
 @NgModule({
   imports: [
@@ -98,7 +100,9 @@ import { ActionTitleComponent } from './components/action-title/action-title.com
     PageNotFoundComponent,
     ToolbarComponent,
     NavItemComponent,
-    ActionTitleComponent
+    ActionTitleComponent,
+    FormContainerComponent,
+    FormBlockComponent
   ],
   exports: [
     // @angular
@@ -147,7 +151,9 @@ import { ActionTitleComponent } from './components/action-title/action-title.com
     PageNotFoundComponent,
     ToolbarComponent,
     NavItemComponent,
-    ActionTitleComponent
+    ActionTitleComponent,
+    FormContainerComponent,
+    FormBlockComponent
   ]
 })
 export class SharedModule {}
