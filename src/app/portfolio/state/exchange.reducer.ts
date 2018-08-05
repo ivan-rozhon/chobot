@@ -1,4 +1,4 @@
-import { Exchange } from '@portfolio/portfolio.model';
+import { Exchange } from '@portfolio/models';
 import { ExchangeActions, ExchangeActionTypes } from '@portfolio/state/exchange.actions';
 
 export interface State {

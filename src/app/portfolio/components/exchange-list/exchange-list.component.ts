@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Exchange } from '@portfolio/portfolio.model';
+import { Exchange } from '@portfolio/models';
 
 @Component({
   selector: 'cc-exchange-list',

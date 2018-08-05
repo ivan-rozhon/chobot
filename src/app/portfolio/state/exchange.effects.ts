@@ -7,7 +7,7 @@ import { Action } from '@ngrx/store';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 
 import { PortfolioService } from '@portfolio/portfolio.service';
-import { Exchange } from '@portfolio/portfolio.model';
+import { Exchange } from '@portfolio/models';
 import { ExchangeActionTypes, LoadList, LoadListComplete, LoadListFail } from '@portfolio/state/exchange.actions';
 
 @Injectable()
