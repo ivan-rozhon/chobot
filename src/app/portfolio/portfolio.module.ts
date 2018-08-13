@@ -13,7 +13,7 @@ import { SharedModule } from '@shared/shared.module';
 import { PortfolioRoutingModule } from '@portfolio/portfolio-routing.module';
 
 // services
-import { PortfolioService } from '@portfolio/portfolio.service';
+import { ExchangeService } from '@portfolio/shared';
 
 // containers
 import { PortfolioPageComponent } from '@portfolio/containers/portfolio-page/portfolio-page.component';
@@ -21,7 +21,7 @@ import { ExchangeComponent } from '@portfolio/containers/exchange/exchange.compo
 import { ExchangeConfigComponent } from '@portfolio/containers/exchange-config/exchange-config.component';
 
 // components
-import { ExchangeListComponent } from './components/exchange-list/exchange-list.component';
+import { ExchangeListComponent } from '@portfolio/components/exchange-list/exchange-list.component';
 
 @NgModule({
   imports: [
@@ -37,8 +37,9 @@ import { ExchangeListComponent } from './components/exchange-list/exchange-list.
     PortfolioPageComponent,
     ExchangeComponent,
     ExchangeConfigComponent,
+    // components
     ExchangeListComponent
   ],
-  providers: [PortfolioService]
+  providers: [ExchangeService]
 })
 export class PortfolioModule {}

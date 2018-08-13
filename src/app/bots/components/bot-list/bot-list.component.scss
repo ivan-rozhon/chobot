@@ -6,4 +6,15 @@
 
 table {
   width: 100%;
+
+  // TODO: globalize?
+  // minimize 'actions' column
+  .mat-column-actions {
+    width: 1%;
+    white-space: nowrap;
+
+    button:not(:last-child) {
+      margin-right: $cc-space-s;
+    }
+  }
 }

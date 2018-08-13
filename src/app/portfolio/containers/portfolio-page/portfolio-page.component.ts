@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 import * as fromPortfolio from '@portfolio/portfolio.state';
 import * as ExchangeActions from '@portfolio/state/exchange.actions';
-import { Exchange } from '@portfolio/models';
+import { Exchange } from '@portfolio/shared';
 
 @Component({
   selector: 'cc-portfolio-page',

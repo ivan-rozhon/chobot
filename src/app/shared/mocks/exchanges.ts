@@ -1,6 +1,6 @@
 import * as faker from 'faker';
 
-import { Exchange } from '@portfolio/models';
+import { Exchange } from '@portfolio/shared';
 
 export const exchange = (): Exchange => {
   return {

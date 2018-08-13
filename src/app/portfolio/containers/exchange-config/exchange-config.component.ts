@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { ExchangeConfig } from '@portfolio/models';
+import { ExchangeConfig } from '@portfolio/shared';
 
 @Component({
   selector: 'cc-exchange-config',

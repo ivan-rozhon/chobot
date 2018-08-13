@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Bot } from '@bots/bots.model';
+import { Bot } from '@bots/shared';
 
 @Component({
   selector: 'cc-bot-list',
@@ -9,7 +9,7 @@ import { Bot } from '@bots/bots.model';
 })
 export class BotListComponent {
   bots: Bot[];
-  displayedColumns: string[] = ['name', 'exchange'];
+  displayedColumns: string[] = ['name', 'pairs', 'exchange', 'positions', 'performance', 'active', 'actions'];
 
   constructor() {
     // TODO: remove (mock)

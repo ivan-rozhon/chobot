@@ -4,10 +4,10 @@ import { Observable } from 'rxjs';
 
 import { DataService } from '@core/data.service';
 
-import { Exchange } from '@portfolio/models';
+import { Exchange } from '@portfolio/shared';
 
 @Injectable()
-export class PortfolioService {
+export class ExchangeService {
   constructor(private dataService: DataService) {}
 
   // TODO: comment, url, name

@@ -1,0 +1,28 @@
+@import 'general';
+
+// =======================
+// ANGULAR MATERIAL STYLES
+// =======================
+
+.mat-form-field {
+  .mat-form-field-suffix {
+    .mat-icon-button {
+      @extend %suffix-icon;
+    }
+
+    span + .mat-icon-button {
+      margin-left: $cc-space-s;
+    }
+  }
+}
+
+%suffix-icon {
+  .mat-icon {
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scale(0.7);
+    }
+  }
+}
