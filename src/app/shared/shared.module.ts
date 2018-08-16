@@ -51,6 +51,8 @@ import { ActionTitleComponent } from './components/action-title/action-title.com
 import { FormContainerComponent } from './components/form-container/form-container.component';
 import { FormBlockComponent } from './components/form-block/form-block.component';
 import { FormColumnComponent } from './components/form-column/form-column.component';
+import { FormTitleComponent } from './components/form-title/form-title.component';
+import { CardRowComponent } from './components/card-row/card-row.component';
 
 // directives
 // ...
@@ -108,7 +110,9 @@ import { FormColumnComponent } from './components/form-column/form-column.compon
     ActionTitleComponent,
     FormContainerComponent,
     FormBlockComponent,
-    FormColumnComponent
+    FormColumnComponent,
+    FormTitleComponent,
+    CardRowComponent
     // directives
     // ...
   ],
@@ -162,7 +166,9 @@ import { FormColumnComponent } from './components/form-column/form-column.compon
     ActionTitleComponent,
     FormContainerComponent,
     FormBlockComponent,
-    FormColumnComponent
+    FormColumnComponent,
+    FormTitleComponent,
+    CardRowComponent
     // directives
     // ...
   ]

@@ -1,7 +1,7 @@
 <cc-action-title>
   Bot configuration
 
-  <button mat-raised-button color="accent">
+  <button mat-stroked-button color="primary">
     <span>Cancel</span>
   </button>
   <button mat-raised-button color="primary">
@@ -9,53 +9,62 @@
   </button>
 </cc-action-title>
 
-<mat-card>
-  <cc-form-container>
-    <cc-form-block columns="3">
-      <mat-form-field>
-        <input matInput placeholder="Name" required>
-        <button color="primary" mat-button matSuffix mat-icon-button>
-          <mat-icon svgIcon="help-circle"></mat-icon>
-        </button>
-      </mat-form-field>
+<cc-card-row>
+  <mat-card [style.flex]="2">
+    <cc-form-container>
+      <cc-form-title>Base config</cc-form-title>
+      <cc-form-block columns="3">
+        <mat-form-field>
+          <input matInput placeholder="Name" required>
+          <button color="primary" mat-button matSuffix mat-icon-button>
+            <mat-icon svgIcon="help-circle"></mat-icon>
+          </button>
+        </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Exchange" required>
-        <button color="primary" mat-button matSuffix mat-icon-button>
-          <mat-icon svgIcon="help-circle"></mat-icon>
-        </button>
-      </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Exchange" required>
+          <button color="primary" mat-button matSuffix mat-icon-button>
+            <mat-icon svgIcon="help-circle"></mat-icon>
+          </button>
+        </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Base currency" required>
-        <button color="primary" mat-button matSuffix mat-icon-button>
-          <mat-icon svgIcon="help-circle"></mat-icon>
-        </button>
-      </mat-form-field>
-    </cc-form-block>
+        <mat-form-field>
+          <input matInput placeholder="Base currency" required>
+          <button color="primary" mat-button matSuffix mat-icon-button>
+            <mat-icon svgIcon="help-circle"></mat-icon>
+          </button>
+        </mat-form-field>
+      </cc-form-block>
 
-    <cc-form-block columns="3">
-      <mat-form-field>
-        <input matInput placeholder="Ammount to trade" required>
-        <button color="primary" mat-button matSuffix mat-icon-button>
-          <mat-icon svgIcon="help-circle"></mat-icon>
-        </button>
-      </mat-form-field>
+      <cc-form-block columns="3">
+        <mat-form-field>
+          <input matInput placeholder="Ammount to trade" required>
+          <button color="primary" mat-button matSuffix mat-icon-button>
+            <mat-icon svgIcon="help-circle"></mat-icon>
+          </button>
+        </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Maximum ammount allocated" required>
-        <span matSuffix>BTC</span>
-        <button color="primary" mat-button matSuffix mat-icon-button>
-          <mat-icon svgIcon="help-circle"></mat-icon>
-        </button>
-      </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Maximum ammount allocated" required>
+          <span matSuffix>BTC</span>
+          <button color="primary" mat-button matSuffix mat-icon-button>
+            <mat-icon svgIcon="help-circle"></mat-icon>
+          </button>
+        </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Maximum open positions" required>
-        <button color="primary" mat-button matSuffix mat-icon-button>
-          <mat-icon svgIcon="help-circle"></mat-icon>
-        </button>
-      </mat-form-field>
-    </cc-form-block>
-  </cc-form-container>
-</mat-card>
+        <mat-form-field>
+          <input matInput placeholder="Maximum open positions" required>
+          <button color="primary" mat-button matSuffix mat-icon-button>
+            <mat-icon svgIcon="help-circle"></mat-icon>
+          </button>
+        </mat-form-field>
+      </cc-form-block>
+    </cc-form-container>
+  </mat-card>
+
+  <mat-card [style.flex]="1">
+    <cc-form-container>
+      <cc-form-title>Bot status</cc-form-title>
+    </cc-form-container>
+  </mat-card>
+</cc-card-row>
