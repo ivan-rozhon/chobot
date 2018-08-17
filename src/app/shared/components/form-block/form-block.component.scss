@@ -5,7 +5,12 @@ cc-form-block {
   flex-flow: row wrap;
   margin: 0 (-$cc-space);
 
-  mat-form-field {
+  mat-form-field,
+  > div {
     padding: 0 $cc-space;
+  }
+
+  mat-slide-toggle {
+    padding: $cc-space 0 0 0;
   }
 }

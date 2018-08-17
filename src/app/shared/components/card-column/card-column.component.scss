@@ -1,0 +1,14 @@
+@import 'general';
+
+cc-card-column {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 $cc-space-s 0 $cc-space-s;
+  padding: 0 $cc-space-mid-l;
+
+  > mat-card {
+    flex: 1 0 auto;
+    margin: $cc-space (-$cc-space-mid-l) 0 (-$cc-space-mid-l);
+    min-width: 240px + 2 * $cc-space-mid-l;
+  }
+}

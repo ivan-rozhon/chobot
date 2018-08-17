@@ -5,7 +5,7 @@ cc-card-row {
   flex-flow: row wrap;
   margin: (-$cc-space) (-$cc-space-s) 0 (-$cc-space-s);
 
-  .mat-card {
+  > mat-card {
     margin: $cc-space $cc-space-s 0 $cc-space-s;
     min-width: 240px + 2 * $cc-space-mid-l;
   }

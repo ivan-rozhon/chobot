@@ -10,61 +10,160 @@
 </cc-action-title>
 
 <cc-card-row>
-  <mat-card [style.flex]="2">
-    <cc-form-container>
-      <cc-form-title>Base config</cc-form-title>
-      <cc-form-block columns="3">
-        <mat-form-field>
-          <input matInput placeholder="Name" required>
-          <button color="primary" mat-button matSuffix mat-icon-button>
-            <mat-icon svgIcon="help-circle"></mat-icon>
-          </button>
-        </mat-form-field>
+  <cc-card-column [style.flex]="2">
+    <mat-card>
+      <cc-form-container>
+        <cc-form-title>Base config</cc-form-title>
+        <cc-form-block columns="3">
+          <mat-form-field>
+            <input matInput placeholder="Name" required>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
 
-        <mat-form-field>
-          <input matInput placeholder="Exchange" required>
-          <button color="primary" mat-button matSuffix mat-icon-button>
-            <mat-icon svgIcon="help-circle"></mat-icon>
-          </button>
-        </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Exchange" required>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
 
-        <mat-form-field>
-          <input matInput placeholder="Base currency" required>
-          <button color="primary" mat-button matSuffix mat-icon-button>
-            <mat-icon svgIcon="help-circle"></mat-icon>
-          </button>
-        </mat-form-field>
-      </cc-form-block>
+          <mat-form-field>
+            <input matInput placeholder="Base currency" required>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
+        </cc-form-block>
 
-      <cc-form-block columns="3">
-        <mat-form-field>
-          <input matInput placeholder="Ammount to trade" required>
-          <button color="primary" mat-button matSuffix mat-icon-button>
-            <mat-icon svgIcon="help-circle"></mat-icon>
-          </button>
-        </mat-form-field>
+        <cc-form-block columns="3">
+          <mat-form-field>
+            <input matInput placeholder="Ammount to trade" required>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
 
-        <mat-form-field>
-          <input matInput placeholder="Maximum ammount allocated" required>
-          <span matSuffix>BTC</span>
-          <button color="primary" mat-button matSuffix mat-icon-button>
-            <mat-icon svgIcon="help-circle"></mat-icon>
-          </button>
-        </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Maximum ammount allocated" required>
+            <span matSuffix>BTC</span>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
 
-        <mat-form-field>
-          <input matInput placeholder="Maximum open positions" required>
-          <button color="primary" mat-button matSuffix mat-icon-button>
-            <mat-icon svgIcon="help-circle"></mat-icon>
-          </button>
-        </mat-form-field>
-      </cc-form-block>
-    </cc-form-container>
-  </mat-card>
+          <mat-form-field>
+            <input matInput placeholder="Maximum open positions" required>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
+        </cc-form-block>
+      </cc-form-container>
+    </mat-card>
+  </cc-card-column>
 
-  <mat-card [style.flex]="1">
-    <cc-form-container>
-      <cc-form-title>Bot status</cc-form-title>
-    </cc-form-container>
-  </mat-card>
+  <cc-card-column [style.flex]="1">
+    <mat-card>
+      <cc-form-container>
+        <cc-form-title>Bot status</cc-form-title>
+        <cc-form-block columns="1">
+          <div>
+            <mat-slide-toggle color="primary">Active</mat-slide-toggle>
+          </div>
+          <div>
+            <mat-slide-toggle color="primary">Paper Trading</mat-slide-toggle>
+          </div>
+          <div>
+            <mat-slide-toggle color="primary">Buying</mat-slide-toggle>
+          </div>
+          <div>
+            <mat-slide-toggle color="primary">Selling</mat-slide-toggle>
+          </div>
+        </cc-form-block>
+      </cc-form-container>
+    </mat-card>
+  </cc-card-column>
+</cc-card-row>
+
+<cc-card-row>
+  <cc-card-column [style.flex]="2">
+    <mat-card>
+      <cc-form-container>
+        <cc-form-title>Strategy</cc-form-title>
+        <cc-form-block columns="3">
+          <mat-form-field>
+            <input matInput placeholder="Trade coins" required>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Candlestick period" required>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
+        </cc-form-block>
+
+        <cc-form-block columns="3">
+          <div>
+            <mat-slide-toggle color="primary">Use SMA</mat-slide-toggle>
+          </div>
+
+          <mat-form-field>
+            <input matInput placeholder="Candlestick period" required>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
+        </cc-form-block>
+      </cc-form-container>
+    </mat-card>
+
+    <mat-card>
+      <cc-form-container>
+        <cc-form-title>Strategy advanced config</cc-form-title>
+        <cc-form-block columns="3">
+          <div>
+            <mat-slide-toggle color="primary">Buy Wait for cross</mat-slide-toggle>
+          </div>
+          <div>
+            <mat-slide-toggle color="primary">Cross Down Sell</mat-slide-toggle>
+          </div>
+        </cc-form-block>
+
+        <cc-form-block columns="3">
+          <div>
+            <mat-slide-toggle color="primary">Buy remove last open</mat-slide-toggle>
+          </div>
+          <div>
+            <mat-slide-toggle color="primary">Sell remove last open</mat-slide-toggle>
+          </div>
+        </cc-form-block>
+      </cc-form-container>
+    </mat-card>
+  </cc-card-column>
+
+  <cc-card-column [style.flex]="1">
+    <mat-card>
+      <cc-form-container>
+        <cc-form-title>Take profit</cc-form-title>
+      </cc-form-container>
+    </mat-card>
+
+    <mat-card>
+      <cc-form-container>
+        <cc-form-title>Take profit</cc-form-title>
+      </cc-form-container>
+    </mat-card>
+
+    <mat-card>
+      <cc-form-container>
+        <cc-form-title>Trailing buy</cc-form-title>
+      </cc-form-container>
+    </mat-card>
+  </cc-card-column>
 </cc-card-row>

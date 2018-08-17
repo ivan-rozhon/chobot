@@ -13,7 +13,8 @@
   // calculate real width of column including paddings
   $column-width: calc(#{$column-perc} - 2 * #{$cc-space});
 
-  & > mat-form-field {
+  & > mat-form-field,
+  & > div {
     width: $column-width;
     min-width: $column-min-width;
   }
