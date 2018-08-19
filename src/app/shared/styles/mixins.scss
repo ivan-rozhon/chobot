@@ -14,7 +14,7 @@
   $column-width: calc(#{$column-perc} - 2 * #{$cc-space});
 
   & > mat-form-field,
-  & > div {
+  & > cc-form-field {
     width: $column-width;
     min-width: $column-min-width;
   }

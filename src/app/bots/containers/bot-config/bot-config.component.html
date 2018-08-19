@@ -60,6 +60,23 @@
             </button>
           </mat-form-field>
         </cc-form-block>
+        <cc-form-block columns="3">
+          <cc-form-field>
+            Notification settings
+          </cc-form-field>
+          <cc-form-field>
+            <mat-slide-toggle color="primary">Progressive buy ammount</mat-slide-toggle>
+            <button color="primary" mat-button mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </cc-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Max % buy" required>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
+        </cc-form-block>
       </cc-form-container>
     </mat-card>
   </cc-card-column>
@@ -69,18 +86,18 @@
       <cc-form-container>
         <cc-form-title>Bot status</cc-form-title>
         <cc-form-block columns="1">
-          <div>
+          <cc-form-field>
             <mat-slide-toggle color="primary">Active</mat-slide-toggle>
-          </div>
-          <div>
+          </cc-form-field>
+          <cc-form-field>
             <mat-slide-toggle color="primary">Paper Trading</mat-slide-toggle>
-          </div>
-          <div>
+          </cc-form-field>
+          <cc-form-field>
             <mat-slide-toggle color="primary">Buying</mat-slide-toggle>
-          </div>
-          <div>
+          </cc-form-field>
+          <cc-form-field>
             <mat-slide-toggle color="primary">Selling</mat-slide-toggle>
-          </div>
+          </cc-form-field>
         </cc-form-block>
       </cc-form-container>
     </mat-card>
@@ -94,7 +111,9 @@
         <cc-form-title>Strategy</cc-form-title>
         <cc-form-block columns="3">
           <mat-form-field>
-            <input matInput placeholder="Trade coins" required>
+            <mat-select placeholder="Trade coins">
+              <mat-option></mat-option>
+            </mat-select>
             <button color="primary" mat-button matSuffix mat-icon-button>
               <mat-icon svgIcon="help-circle"></mat-icon>
             </button>
@@ -109,9 +128,12 @@
         </cc-form-block>
 
         <cc-form-block columns="3">
-          <div>
+          <cc-form-field>
             <mat-slide-toggle color="primary">Use SMA</mat-slide-toggle>
-          </div>
+            <button color="primary" mat-button mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </cc-form-field>
 
           <mat-form-field>
             <input matInput placeholder="Candlestick period" required>
@@ -127,21 +149,38 @@
       <cc-form-container>
         <cc-form-title>Strategy advanced config</cc-form-title>
         <cc-form-block columns="3">
-          <div>
+          <cc-form-field>
             <mat-slide-toggle color="primary">Buy Wait for cross</mat-slide-toggle>
-          </div>
-          <div>
+          </cc-form-field>
+          <cc-form-field>
             <mat-slide-toggle color="primary">Cross Down Sell</mat-slide-toggle>
-          </div>
+          </cc-form-field>
+          <cc-form-field>
+            <mat-slide-toggle color="primary">Cross Down Trailing</mat-slide-toggle>
+          </cc-form-field>
         </cc-form-block>
 
         <cc-form-block columns="3">
-          <div>
+          <cc-form-field>
             <mat-slide-toggle color="primary">Buy remove last open</mat-slide-toggle>
-          </div>
-          <div>
+          </cc-form-field>
+          <cc-form-field>
             <mat-slide-toggle color="primary">Sell remove last open</mat-slide-toggle>
-          </div>
+          </cc-form-field>
+        </cc-form-block>
+        <cc-form-block columns="3">
+          <mat-form-field>
+            <input matInput placeholder="Buy Intolerantion (%)" required>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Sell Intolerantion (%)" required>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
         </cc-form-block>
       </cc-form-container>
     </mat-card>
@@ -151,6 +190,23 @@
     <mat-card>
       <cc-form-container>
         <cc-form-title>Take profit</cc-form-title>
+        <!-- TODO: Two columns... -->
+        <!-- <cc-form-block columns="2">
+          <mat-form-field>
+            <input matInput placeholder="Take profit" required>
+            <span matSuffix>%</span>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Insta-sell profit" required>
+            <span matSuffix>%</span>
+            <button color="primary" mat-button matSuffix mat-icon-button>
+              <mat-icon svgIcon="help-circle"></mat-icon>
+            </button>
+          </mat-form-field>
+        </cc-form-block> -->
       </cc-form-container>
     </mat-card>
 

@@ -61,3 +61,17 @@ $cc-space-mid-xl: $cc-space-mid-l * 2; // (48px)
 // ============================
 $form-columns: 12;
 // ============================
+
+// =======================
+// ANGULAR MATERIAL STYLES
+// =======================
+%suffix-icon {
+  .mat-icon {
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scale(0.7);
+    }
+  }
+}

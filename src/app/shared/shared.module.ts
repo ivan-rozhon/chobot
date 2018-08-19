@@ -54,6 +54,7 @@ import { FormColumnComponent } from './components/form-column/form-column.compon
 import { FormTitleComponent } from './components/form-title/form-title.component';
 import { CardRowComponent } from './components/card-row/card-row.component';
 import { CardColumnComponent } from './components/card-column/card-column.component';
+import { FormFieldComponent } from './components/form-field/form-field.component';
 
 // directives
 // ...
@@ -114,7 +115,8 @@ import { CardColumnComponent } from './components/card-column/card-column.compon
     FormColumnComponent,
     FormTitleComponent,
     CardRowComponent,
-    CardColumnComponent
+    CardColumnComponent,
+    FormFieldComponent
     // directives
     // ...
   ],
@@ -171,7 +173,8 @@ import { CardColumnComponent } from './components/card-column/card-column.compon
     FormColumnComponent,
     FormTitleComponent,
     CardRowComponent,
-    CardColumnComponent
+    CardColumnComponent,
+    FormFieldComponent
     // directives
     // ...
   ]
