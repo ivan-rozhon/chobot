@@ -6,7 +6,8 @@ import { switchMap, map, catchError } from 'rxjs/operators';
 import { Action } from '@ngrx/store';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 
-import { Exchange, ExchangeService } from '@portfolio/shared';
+import { Exchange } from '@portfolio/shared/models';
+import { ExchangeService } from '@portfolio/shared/services';
 import { ExchangeActionTypes, LoadList, LoadListComplete, LoadListFail } from '@portfolio/state/exchange.actions';
 
 @Injectable()

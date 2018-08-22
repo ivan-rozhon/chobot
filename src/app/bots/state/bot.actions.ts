@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 
-import { Bot } from '@bots/shared';
+import { Bot } from '@bots/shared/models';
 
 export enum BotActionTypes {
   // LOAD BOT LIST

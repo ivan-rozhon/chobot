@@ -13,7 +13,7 @@ import { SharedModule } from '@shared/shared.module';
 import { PortfolioRoutingModule } from '@portfolio/portfolio-routing.module';
 
 // services
-import { ExchangeService } from '@portfolio/shared';
+import { ExchangeService } from '@portfolio/shared/services';
 
 // containers
 import { PortfolioPageComponent } from '@portfolio/containers/portfolio-page/portfolio-page.component';

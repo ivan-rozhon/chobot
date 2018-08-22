@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 import { DataService } from '@core/data.service';
 
-import { Exchange } from '@portfolio/shared';
+import { Exchange } from '@portfolio/shared/models';
 
 @Injectable()
 export class ExchangeService {

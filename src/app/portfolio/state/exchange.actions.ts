@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 
-import { Exchange } from '@portfolio/shared';
+import { Exchange } from '@portfolio/shared/models';
 
 export enum ExchangeActionTypes {
   // LOAD EXCHANGE LIST

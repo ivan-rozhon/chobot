@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Bot } from '@bots/shared';
+import { Bot } from '@bots/shared/models';
 
 @Component({
   selector: 'cc-bot-list',
