@@ -1,3 +1,10 @@
 <span>
   <ng-content></ng-content>
 </span>
+
+<cc-form-field *ngIf="toggleable">
+  <mat-slide-toggle color="primary"></mat-slide-toggle>
+  <button color="primary" mat-button mat-icon-button>
+    <mat-icon svgIcon="help-circle"></mat-icon>
+  </button>
+</cc-form-field>

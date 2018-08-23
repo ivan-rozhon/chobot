@@ -2,16 +2,23 @@
 
 cc-form-field {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   padding: $cc-space-mid-s $cc-space $cc-space;
 
-  mat-slide-toggle + .mat-icon-button {
-    @extend %suffix-icon;
+  mat-slide-toggle {
+    .mat-slide-toggle-content {
+      white-space: normal;
+    }
 
-    margin-left: $cc-space-s;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: baseline;
-    font: inherit;
+    & + .mat-icon-button {
+      @extend %suffix-icon;
+
+      margin-left: $cc-space-s;
+      width: 1.5em;
+      height: 1.5em;
+      vertical-align: baseline;
+      font: inherit;
+    }
   }
 }

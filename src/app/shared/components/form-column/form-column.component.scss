@@ -1,8 +1,20 @@
+@import 'general';
+
 cc-form-column {
   display: flex;
 
   mat-form-field {
     flex: 1;
-    min-width: 180px;
+    min-width: calc(100% - 2 * #{$cc-space});
+  }
+
+  &.half-split {
+    display: flex;
+    min-width: calc(180px + 2 * #{$cc-space});
+
+    mat-form-field {
+      width: 0;
+      min-width: calc(50% - 2 * #{$cc-space});
+    }
   }
 }

@@ -1,6 +1,8 @@
 @import 'general';
 
 :host {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: $cc-space;
   border-bottom: 1px solid $cc-dark-dividers;
   padding-bottom: $cc-space;
@@ -8,5 +10,9 @@
   span {
     font-size: $cc-font-size-xl;
     font-weight: $cc-font-bold;
+  }
+
+  cc-form-field {
+    padding: 0 0 0 $cc-space;
   }
 }
