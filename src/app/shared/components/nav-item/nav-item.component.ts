@@ -1,5 +1,5 @@
 import { Component, Input, Optional } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, UrlTree } from '@angular/router';
 
 import { SidenavComponent } from '@shared/components/sidenav/sidenav.component';
 
@@ -10,7 +10,7 @@ import { SidenavComponent } from '@shared/components/sidenav/sidenav.component';
 })
 export class NavItemComponent {
   @Input()
-  link: string | any[] = '/';
+  link: string | UrlTree = '/';
   @Input()
   icon: string;
 
