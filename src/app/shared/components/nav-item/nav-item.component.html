@@ -1,4 +1,4 @@
-<a mat-list-item [class.active]="router.isActive(routerLink)">
+<a mat-list-item [class.active]="router.isActive(link)" [routerLink]="link" (click)="onNavigation()">
   <mat-icon mat-list-icon [svgIcon]="icon"></mat-icon>
   <span mat-line>
     <ng-content></ng-content>

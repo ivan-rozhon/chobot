@@ -13,7 +13,7 @@ export const initialState: State = {
 
 export function reducer(state = initialState, action: ExchangeActions): State {
   switch (action.type) {
-    // LOAD EXCHANGE LIST
+    // Load Exchange List
     // ===
     case ExchangeActionTypes.LoadList: {
       return {

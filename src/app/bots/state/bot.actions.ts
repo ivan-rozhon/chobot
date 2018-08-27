@@ -3,13 +3,13 @@ import { Action } from '@ngrx/store';
 import { Bot } from '@bots/shared/models';
 
 export enum BotActionTypes {
-  // LOAD BOT LIST
+  // Load Bot List
   LoadList = '[Bot] Load List',
   LoadListComplete = '[Bot] Load List Complete',
   LoadListFail = '[Bot] Load List Fail'
 }
 
-// LOAD BOT LIST
+// Load Bot List
 // ===
 export class LoadList implements Action {
   readonly type = BotActionTypes.LoadList;

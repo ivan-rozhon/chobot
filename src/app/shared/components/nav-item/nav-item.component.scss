@@ -1,6 +1,7 @@
 @import 'general';
 
 [mat-list-item] {
+  padding-right: $cc-space;
   color: mat-color($mat-gray, 500, 1);
 
   &.active {

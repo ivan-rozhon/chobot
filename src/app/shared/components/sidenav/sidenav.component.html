@@ -1,5 +1,5 @@
-<mat-sidenav-container>
-  <mat-sidenav opened mode="side">
+<mat-sidenav-container autosize>
+  <mat-sidenav [style.width.px]="sidenavWidth" [opened]="sideNavOpen" [mode]="sidenavMode" (closed)="closeOnOverMode($event)">
     <mat-nav-list>
       <ng-content select="cc-nav-item"></ng-content>
     </mat-nav-list>

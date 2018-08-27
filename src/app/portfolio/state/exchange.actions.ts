@@ -3,17 +3,17 @@ import { Action } from '@ngrx/store';
 import { Exchange } from '@portfolio/shared/models';
 
 export enum ExchangeActionTypes {
-  // LOAD EXCHANGE LIST
+  // Load Exchange List
   LoadList = '[Exchange] Load List',
   LoadListComplete = '[Exchange] Load List Complete',
   LoadListFail = '[Exchange] Load List Fail',
-  // LOAD EXCHANGE CONFIG
+  // Load Exchange Config
   LoadConfig = '[Exchange] Load Config',
   LoadConfigComplete = '[Exchange] Load Config Complete',
   LoadConfigFail = '[Exchange] Load Config Fail'
 }
 
-// LOAD EXCHANGE LIST
+// Load Exchange List
 // ===
 export class LoadList implements Action {
   readonly type = ExchangeActionTypes.LoadList;
@@ -32,7 +32,7 @@ export class LoadListFail implements Action {
 }
 // ===
 
-// LOAD EXCHANGE CONFIG
+// Load Exchange Config
 // ===
 export class LoadConfig implements Action {
   readonly type = ExchangeActionTypes.LoadConfig;

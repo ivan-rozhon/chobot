@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 // @angular/material
 import {
@@ -65,6 +66,7 @@ import { FormFieldComponent } from './components/form-field/form-field.component
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
     // @angular/material
     MatAutocompleteModule,
     MatBadgeModule,

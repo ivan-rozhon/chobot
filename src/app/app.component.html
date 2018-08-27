@@ -1,10 +1,10 @@
 <cc-layout>
-  <cc-toolbar>Chobot</cc-toolbar>
+  <cc-toolbar [open]="showSidenav$ | async" (toogleSidenav)="toogleSidenav($event)">Chobot</cc-toolbar>
 
-  <cc-sidenav>
-    <cc-nav-item routerLink="/dashboard" icon="view-dashboard-variant">Dashboard</cc-nav-item>
-    <cc-nav-item routerLink="/portfolio" icon="briefcase">Portfolio</cc-nav-item>
-    <cc-nav-item routerLink="/bots" icon="robot">Bots</cc-nav-item>
+  <cc-sidenav [open]="showSidenav$ | async" (toogleSidenav)="toogleSidenav($event)">
+    <cc-nav-item link="/dashboard" icon="view-dashboard-variant">Dashboard</cc-nav-item>
+    <cc-nav-item link="/portfolio" icon="briefcase">Portfolio</cc-nav-item>
+    <cc-nav-item link="/bots" icon="robot">Bots</cc-nav-item>
 
     <router-outlet class="main-content"></router-outlet>
   </cc-sidenav>
