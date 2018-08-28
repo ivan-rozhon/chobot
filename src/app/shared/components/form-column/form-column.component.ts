@@ -25,8 +25,14 @@ export class FormColumnComponent implements OnInit {
     // set number of columns
     this._columns = columns;
 
+    // calculate min width of form column
+    const minWidth = Math.min(
+      this.basicColumnWidth * columns + 2 * this.basicColumnPadding,
+      this.basicColumnWidth + 2 * this.basicColumnPadding
+    );
+
     // calculate min width of column according to number of columns
-    this.minWidthStyle = `${this.basicColumnWidth * columns + 2 * this.basicColumnPadding}px`;
+    this.minWidthStyle = `${minWidth}px`;
   }
   @Input()
   set halfSplit(value: any) {
