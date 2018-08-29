@@ -6,7 +6,11 @@ export enum BotActionTypes {
   // Load Bot List
   LoadList = '[Bot] Load List',
   LoadListComplete = '[Bot] Load List Complete',
-  LoadListFail = '[Bot] Load List Fail'
+  LoadListFail = '[Bot] Load List Fail',
+  // Load Bot Config
+  LoadConfig = '[Bot] Load Config',
+  LoadConfigComplete = '[Bot] Load Config Complete',
+  LoadConfigFail = '[Bot] Load Config Fail'
 }
 
 // Load Bot List
@@ -26,6 +30,11 @@ export class LoadListFail implements Action {
 
   constructor(public payload: any) {}
 }
+// ===
+
+// Load Bot Config
+// ===
+
 // ===
 
 export type BotActions = LoadList | LoadListComplete | LoadListFail;

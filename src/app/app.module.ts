@@ -82,7 +82,7 @@ export class AppModule {
     // register 'mdi' icons library
     this.matIconRegistry.addSvgIconSet(
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        `.${environment.contextRoot}${environment.assets}/assets/fonts/mdi/mdi.svg`
+        `${environment.contextRoot}${environment.assets}/assets/fonts/mdi/mdi.svg`
       )
     );
   }

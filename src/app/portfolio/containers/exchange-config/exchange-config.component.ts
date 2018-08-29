@@ -1,7 +1,15 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { ExchangeConfig } from '@portfolio/shared/models';
+import { Store, select } from '@ngrx/store';
+
+import { Observable } from 'rxjs';
+
+import * as fromRoot from '@root/app.state';
+
+import * as fromCore from '@core/core.state';
+import { CodebookService } from '@core/codebook.service';
+
+import { Codebook } from '@shared/models';
 
 @Component({
   selector: 'cc-exchange-config',
@@ -9,25 +17,13 @@ import { ExchangeConfig } from '@portfolio/shared/models';
   styleUrls: ['./exchange-config.component.scss']
 })
 export class ExchangeConfigComponent {
-  configForm: FormGroup;
+  // Store selectors:
+  codebooks$: Observable<Codebook[]>;
 
-  constructor(private formBuilder: FormBuilder) {
-    // build form
-    this.buildForm();
-  }
-
-  /** Build reactive form with form builder */
-  buildForm(): void {
-    this.configForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      exchange: ['', Validators.required],
-      apiKey: ['', Validators.required],
-      apiSecret: ['', Validators.required]
-    });
-  }
-
-  /** Get value of config form */
-  get configFormValue(): ExchangeConfig {
-    return this.configForm.value;
+  constructor(private store: Store<fromRoot.State>, private codebookService: CodebookService) {
+    // Assign store selectors:
+    this.codebooks$ = this.store.pipe(select(fromCore.getCodebooks));
+    // Load codebooks
+    this.codebookService.loadCodebookAction('exchange', 'strategy');
   }
 }

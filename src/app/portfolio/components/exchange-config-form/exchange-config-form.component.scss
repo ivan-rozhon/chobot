@@ -1,0 +1,12 @@
+@import 'general';
+
+:host {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  padding: $cc-space;
+}
+
+cc-form-container {
+  max-width: 620px;
+}

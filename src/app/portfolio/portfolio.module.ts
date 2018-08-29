@@ -22,6 +22,7 @@ import { ExchangeConfigComponent } from '@portfolio/containers/exchange-config/e
 
 // components
 import { ExchangeListComponent } from '@portfolio/components/exchange-list/exchange-list.component';
+import { ExchangeConfigFormComponent } from '@portfolio/components/exchange-config-form/exchange-config-form.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { ExchangeListComponent } from '@portfolio/components/exchange-list/excha
     ExchangeComponent,
     ExchangeConfigComponent,
     // components
-    ExchangeListComponent
+    ExchangeListComponent,
+    ExchangeConfigFormComponent
   ],
   providers: [ExchangeService]
 })
