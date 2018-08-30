@@ -16,9 +16,9 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         .pipe(
           mergeMap(() => {
             // GET /exchangeList
-            if (request.url.endsWith('exchangeList') && request.method === 'GET') {
-              return of(new HttpResponse({ status: 200, body: exchangeList() }));
-            }
+            // if (request.url.endsWith('exchangeList') && request.method === 'GET') {
+            //   return of(new HttpResponse({ status: 200, body: exchangeList() }));
+            // }
 
             // pass through any requests not handled above
             return next.handle(request);

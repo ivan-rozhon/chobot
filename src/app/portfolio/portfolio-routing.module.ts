@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { PortfolioPageComponent } from '@portfolio/containers/portfolio-page/portfolio-page.component';
-import { ExchangeConfigComponent } from '@portfolio/containers/exchange-config/exchange-config.component';
+import { ExchangeConfigPageComponent } from '@portfolio/containers/exchange-config-page/exchange-config-page.component';
 
 const routes: Routes = [
   { path: '', component: PortfolioPageComponent },
-  { path: 'exchange-config', component: ExchangeConfigComponent }
+  { path: 'exchange-config', component: ExchangeConfigPageComponent }
 ];
 
 @NgModule({

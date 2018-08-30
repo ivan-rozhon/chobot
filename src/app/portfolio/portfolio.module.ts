@@ -17,12 +17,12 @@ import { ExchangeService } from '@portfolio/shared/services';
 
 // containers
 import { PortfolioPageComponent } from '@portfolio/containers/portfolio-page/portfolio-page.component';
-import { ExchangeComponent } from '@portfolio/containers/exchange/exchange.component';
-import { ExchangeConfigComponent } from '@portfolio/containers/exchange-config/exchange-config.component';
+import { ExchangePageComponent } from '@portfolio/containers/exchange-page/exchange-page.component';
+import { ExchangeConfigPageComponent } from '@portfolio/containers/exchange-config-page/exchange-config-page.component';
 
 // components
 import { ExchangeListComponent } from '@portfolio/components/exchange-list/exchange-list.component';
-import { ExchangeConfigFormComponent } from '@portfolio/components/exchange-config-form/exchange-config-form.component';
+import { ExchangeConfigComponent } from '@portfolio/components/exchange-config/exchange-config.component';
 
 @NgModule({
   imports: [
@@ -36,11 +36,11 @@ import { ExchangeConfigFormComponent } from '@portfolio/components/exchange-conf
   declarations: [
     // containers
     PortfolioPageComponent,
-    ExchangeComponent,
-    ExchangeConfigComponent,
+    ExchangePageComponent,
+    ExchangeConfigPageComponent,
     // components
     ExchangeListComponent,
-    ExchangeConfigFormComponent
+    ExchangeConfigComponent
   ],
   providers: [ExchangeService]
 })

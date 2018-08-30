@@ -5,12 +5,14 @@
  */
 
 export interface Exchange {
+  id: string;
   name: string;
   type: string;
   apiKey: string;
   apiSecret: string;
-  performance: ExchangePerformance;
-  balance: ExchangeBalance;
+  userId: number;
+  // performance: ExchangePerformance;
+  // balance: ExchangeBalance;
 }
 
 export interface ExchangePerformance {

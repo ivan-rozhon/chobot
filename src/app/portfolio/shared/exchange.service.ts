@@ -12,6 +12,9 @@ export class ExchangeService {
 
   // TODO: comment, url, name
   getExchangeList(): Observable<Exchange[]> {
-    return this.dataService.get<Exchange[]>('exchangeList');
+    return this.dataService.get<Exchange[]>('exchangeConfig', {
+      // TODO: remove (mock)
+      userId: 34
+    });
   }
 }

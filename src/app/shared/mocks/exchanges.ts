@@ -4,27 +4,29 @@ import { Exchange } from '@portfolio/shared/models';
 
 export const exchange = (): Exchange => {
   return {
+    id: faker.random.uuid(),
     name: 'Binance',
     type: '',
     apiKey: '',
     apiSecret: '',
-    performance: {
-      startValue: '0.234',
-      startDate: new Date(),
-      minValue: '0.234',
-      minDate: new Date(),
-      maxValue: '0.234',
-      maxDate: new Date()
-    },
-    balance: {
-      date: new Date(),
-      valueBtc: 0.234,
-      changeBtc: 0.002,
-      changeBtcPerc: 5.98,
-      valueUsd: 0.234,
-      changeUsd: 0.002,
-      changeUsdPerc: 5.98
-    }
+    userId: 34
+    // performance: {
+    //   startValue: '0.234',
+    //   startDate: new Date(),
+    //   minValue: '0.234',
+    //   minDate: new Date(),
+    //   maxValue: '0.234',
+    //   maxDate: new Date()
+    // },
+    // balance: {
+    //   date: new Date(),
+    //   valueBtc: 0.234,
+    //   changeBtc: 0.002,
+    //   changeBtcPerc: 5.98,
+    //   valueUsd: 0.234,
+    //   changeUsd: 0.002,
+    //   changeUsdPerc: 5.98
+    // }
   };
 };
 

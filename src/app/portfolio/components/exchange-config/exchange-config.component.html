@@ -4,7 +4,7 @@
   <button mat-stroked-button color="primary" [routerLink]="['/portfolio']">
     <span>Cancel</span>
   </button>
-  <button mat-raised-button color="primary">
+  <button mat-raised-button color="primary" [disabled]="configForm.invalid">
     <span>Save</span>
   </button>
 </cc-action-title>
@@ -15,24 +15,28 @@
       <cc-form-block columns="3">
         <cc-form-column columnsPart="2">
           <mat-form-field>
-            <input matInput placeholder="Name" formControlName="name" required>
+            <input type="text" matInput placeholder="Name" formControlName="name" required>
           </mat-form-field>
         </cc-form-column>
 
         <mat-form-field>
-          <input matInput placeholder="Exchange" formControlName="exchange" required>
+          <mat-select placeholder="Exchange" formControlName="exchange" required>
+            <mat-option *ngFor="let item of codebookService.getCodebook('exchange', codebooks)" [value]="item.key">
+              {{ item.value }}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
       </cc-form-block>
 
       <cc-form-block columns="1">
         <mat-form-field>
-          <input matInput placeholder="Api key" formControlName="apiKey" required>
+          <input type="text" matInput placeholder="Api key" formControlName="apiKey" required>
         </mat-form-field>
       </cc-form-block>
 
       <cc-form-block columns="1">
         <mat-form-field>
-          <input matInput placeholder="Secret key" formControlName="apiSecret" required>
+          <input type="text" matInput placeholder="Secret key" formControlName="apiSecret" required>
         </mat-form-field>
       </cc-form-block>
     </cc-form-container>

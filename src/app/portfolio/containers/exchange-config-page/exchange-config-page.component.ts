@@ -12,11 +12,11 @@ import { CodebookService } from '@core/codebook.service';
 import { Codebook } from '@shared/models';
 
 @Component({
-  selector: 'cc-exchange-config',
-  templateUrl: './exchange-config.component.html',
-  styleUrls: ['./exchange-config.component.scss']
+  selector: 'cc-exchange-config-page',
+  templateUrl: './exchange-config-page.component.html',
+  styleUrls: ['./exchange-config-page.component.scss']
 })
-export class ExchangeConfigComponent {
+export class ExchangeConfigPageComponent {
   // Store selectors:
   codebooks$: Observable<Codebook[]>;
 
