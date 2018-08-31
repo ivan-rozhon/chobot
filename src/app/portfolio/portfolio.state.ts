@@ -23,6 +23,10 @@ export const getPortfolioState = createFeatureSelector<PortfolioState>('portfoli
 // -- Exchange State
 export const getExchangeState = createSelector(getPortfolioState, (state: PortfolioState) => state.exchange);
 
+// -- -- Exchange Config
+export const getExchange = createSelector(getExchangeState, fromExchange.getExchange);
+export const getExchangeLoading = createSelector(getExchangeState, fromExchange.getExchangeLoading);
+// -- -- Exchange List
 export const getExchanges = createSelector(getExchangeState, fromExchange.getExchanges);
 export const getExchangesLoading = createSelector(getExchangeState, fromExchange.getExchangesLoading);
 // ===

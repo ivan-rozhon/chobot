@@ -4,7 +4,7 @@
   <button mat-stroked-button color="primary" [routerLink]="['/portfolio']">
     <span>Cancel</span>
   </button>
-  <button mat-raised-button color="primary" [disabled]="configForm.invalid">
+  <button mat-raised-button color="primary" [disabled]="configForm.invalid" (click)="onSave(exchange, configFormValue)">
     <span>Save</span>
   </button>
 </cc-action-title>

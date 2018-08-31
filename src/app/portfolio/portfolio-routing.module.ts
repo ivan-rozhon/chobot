@@ -6,7 +6,8 @@ import { ExchangeConfigPageComponent } from '@portfolio/containers/exchange-conf
 
 const routes: Routes = [
   { path: '', component: PortfolioPageComponent },
-  { path: 'exchange-config', component: ExchangeConfigPageComponent }
+  { path: 'new-exchange-config', component: ExchangeConfigPageComponent },
+  { path: 'exchange-config/:id', component: ExchangeConfigPageComponent }
 ];
 
 @NgModule({

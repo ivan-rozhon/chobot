@@ -10,7 +10,11 @@ export enum ExchangeActionTypes {
   // Load Exchange Config
   LoadConfig = '[Exchange] Load Config',
   LoadConfigComplete = '[Exchange] Load Config Complete',
-  LoadConfigFail = '[Exchange] Load Config Fail'
+  LoadConfigFail = '[Exchange] Load Config Fail',
+  // Save Exchange Config
+  SaveConfig = '[Exchange] Save Config',
+  SaveConfigComplete = '[Exchange] Save Config Complete',
+  SaveConfigFail = '[Exchange] Save Config Fail'
 }
 
 // Load Exchange List
@@ -47,10 +51,30 @@ export class LoadConfigFail implements Action {
 }
 // ===
 
+// Save Exchange Config
+// ===
+export class SaveConfig implements Action {
+  readonly type = ExchangeActionTypes.SaveConfig;
+
+  constructor(public payload: Exchange) {}
+}
+
+export class SaveConfigComplete implements Action {
+  readonly type = ExchangeActionTypes.SaveConfigComplete;
+}
+
+export class SaveConfigFail implements Action {
+  readonly type = ExchangeActionTypes.SaveConfigFail;
+}
+// ===
+
 export type ExchangeActions =
   | LoadList
   | LoadListComplete
   | LoadListFail
   | LoadConfig
   | LoadConfigComplete
-  | LoadConfigFail;
+  | LoadConfigFail
+  | SaveConfig
+  | SaveConfigComplete
+  | SaveConfigFail;
