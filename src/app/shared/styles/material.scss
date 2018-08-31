@@ -4,6 +4,7 @@
 // ANGULAR MATERIAL STYLES
 // =======================
 
+// mat-form-field
 .mat-form-field {
   .mat-form-field-suffix {
     .mat-icon-button {
@@ -13,5 +14,15 @@
     span + .mat-icon-button {
       margin-left: $cc-space-s;
     }
+  }
+}
+
+// mat-card
+.mat-card {
+  > .mat-progress-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
   }
 }

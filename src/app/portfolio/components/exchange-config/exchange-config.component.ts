@@ -32,9 +32,9 @@ export class ExchangeConfigComponent {
   buildForm(): void {
     this.configForm = this.formBuilder.group({
       name: ['', Validators.required],
-      exchange: ['', Validators.required],
+      type: ['', Validators.required],
       apiKey: ['', Validators.required],
-      apiSecret: ['', Validators.required]
+      apiSecret: ['']
     });
   }
 
@@ -50,5 +50,10 @@ export class ExchangeConfigComponent {
   /** Get value of config form */
   get configFormValue(): Partial<Exchange> {
     return this.configForm.value;
+  }
+
+  /** Get ID of exchange if exists */
+  get exchangeId(): string {
+    return this.exchange ? this.exchange.id : null;
   }
 }

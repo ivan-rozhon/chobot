@@ -31,14 +31,17 @@ export class ExchangeEffects {
     )
   );
 
-  // @Effect()
-  // saveConfig$: Observable<Action> = this.actions$.pipe(
-  //   ofType<SaveConfig>(ExchangeActionTypes.SaveConfig),
-  //   map((action: SaveConfig) => action.payload),
-  //   concatMap((exchange: Exchange) =>
-  //     this.exchangeService.
-  //   )
-  // );
+  @Effect()
+  saveConfig$: Observable<Action> = this.actions$.pipe(
+    ofType<SaveConfig>(ExchangeActionTypes.SaveConfig),
+    map((action: SaveConfig) => action.payload),
+    concatMap((exchange: Exchange) =>
+      this.exchangeService.saveExchange(exchange).pipe(
+        map((exchangeId: string) => new SaveConfigComplete()),
+        catchError(err => of(new SaveConfigFail(err)))
+      )
+    )
+  );
 
   constructor(private actions$: Actions, private exchangeService: ExchangeService) {}
 }

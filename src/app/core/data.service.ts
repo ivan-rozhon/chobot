@@ -73,6 +73,30 @@ export class DataService {
   }
 
   /**
+   * Main (global) PUT request method
+   * @param url URL of service
+   * @param body body of request
+   * @param options request options
+   */
+  put<T>(url: string, body: object = {}, options: Partial<RequestOptions> = {}): Observable<T> {
+    // assing body object to empty object
+    body = Object.assign({}, body);
+
+    // update default request options
+    const requestOptions = this.assignRequestOptions(options);
+
+    // define request headers
+    const headers = new HttpHeaders()
+      .set('Accept', requestOptions.accept)
+      .set('Content-Type', requestOptions.contentType);
+
+    return this.httpClient.put<T>(this.composeUrl(apiUrl, url), body, {
+      headers: headers,
+      params: options.params ? this.composeParams(options.params) : null
+    });
+  }
+
+  /**
    * assign specific request options with default ones (and use specific if specified)
    * @param options object of possible request options
    */

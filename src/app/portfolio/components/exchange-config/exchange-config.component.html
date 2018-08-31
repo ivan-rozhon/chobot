@@ -10,6 +10,7 @@
 </cc-action-title>
 
 <mat-card>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   <form [formGroup]="configForm">
     <cc-form-container>
       <cc-form-block columns="3">
@@ -20,7 +21,7 @@
         </cc-form-column>
 
         <mat-form-field>
-          <mat-select placeholder="Exchange" formControlName="exchange" required>
+          <mat-select placeholder="Exchange" formControlName="type" required>
             <mat-option *ngFor="let item of codebookService.getCodebook('exchange', codebooks)" [value]="item.key">
               {{ item.value }}
             </mat-option>
@@ -36,7 +37,7 @@
 
       <cc-form-block columns="1">
         <mat-form-field>
-          <input type="text" matInput placeholder="Secret key" formControlName="apiSecret" required>
+          <input type="text" matInput placeholder="Secret key" formControlName="apiSecret" [required]="!exchangeId">
         </mat-form-field>
       </cc-form-block>
     </cc-form-container>

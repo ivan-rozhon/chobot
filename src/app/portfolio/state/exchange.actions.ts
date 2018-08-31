@@ -48,6 +48,8 @@ export class LoadConfigComplete implements Action {
 
 export class LoadConfigFail implements Action {
   readonly type = ExchangeActionTypes.LoadConfigFail;
+
+  constructor(public payload: any) {}
 }
 // ===
 
@@ -65,6 +67,8 @@ export class SaveConfigComplete implements Action {
 
 export class SaveConfigFail implements Action {
   readonly type = ExchangeActionTypes.SaveConfigFail;
+
+  constructor(public payload: any) {}
 }
 // ===
 

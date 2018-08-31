@@ -12,6 +12,7 @@ import { CodebookService } from '@core/codebook.service';
 import { Codebook } from '@shared/models';
 
 import * as fromPortfolio from '@portfolio/portfolio.state';
+import * as ExchangeActions from '@portfolio/state/exchange.actions';
 import { Exchange } from '@portfolio/shared/models';
 
 @Component({
@@ -32,8 +33,11 @@ export class ExchangeConfigPageComponent {
     this.codebookService.loadCodebookAction('exchange', 'strategy');
   }
 
-  // TODO: comment, dispatch
+  /**
+   * Save/create new exchange
+   * @param exchange New/Updated exchange
+   */
   saveExchange(exchange: Exchange): void {
-    console.log('exchange: ', exchange);
+    this.store.dispatch(new ExchangeActions.SaveConfig(exchange));
   }
 }

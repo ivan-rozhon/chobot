@@ -1,6 +1,6 @@
 <cc-action-title>
   Exchanges
-  <button mat-button color="primary" [routerLink]="['exchange-config']">
+  <button mat-button color="primary" [routerLink]="['new-exchange-config']">
     <span>Connect new exchange</span>
     <mat-icon svgIcon="plus-circle-outline"></mat-icon>
   </button>
@@ -68,7 +68,7 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
-        <button mat-icon-button color="primary">
+        <button mat-icon-button color="primary" [routerLink]="['exchange-config', element.id]">
           <mat-icon svgIcon="pencil"></mat-icon>
         </button>
 

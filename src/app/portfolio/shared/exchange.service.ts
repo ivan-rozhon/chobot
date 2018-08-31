@@ -10,7 +10,11 @@ import { Exchange } from '@portfolio/shared/models';
 export class ExchangeService {
   constructor(private dataService: DataService) {}
 
-  // TODO: comment, url, name
+  /**
+   * exchnageConfig get
+   * GET '/exchangeConfig'
+   * @param exchange New/Updated exchange
+   */
   getExchangeList(): Observable<Exchange[]> {
     return this.dataService.get<Exchange[]>('exchangeConfig', {
       // TODO: remove (mock)
@@ -18,7 +22,16 @@ export class ExchangeService {
     });
   }
 
-  // saveExchangeConfig(): Observable<any> {
-  //   return this.dataService.
-  // }
+  /**
+   * exchnageConfig create/update
+   * PUT '/exchangeConfig'
+   * @param exchange New/Updated exchange
+   */
+  saveExchange(exchange: Exchange): Observable<string> {
+    return this.dataService.put<string>('exchangeConfig', {
+      ...exchange,
+      // TODO: remove (mock)
+      userId: 34
+    });
+  }
 }
