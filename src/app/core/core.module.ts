@@ -7,6 +7,7 @@ import { EffectsModule } from '@ngrx/effects';
 // state
 import { reducers } from '@core/core.state';
 import { CodebookEffects } from '@core/state/codebook.effects';
+import { RouterEffects } from '@core/state/router.effects';
 
 import { environment } from '@environments/environment';
 
@@ -20,7 +21,7 @@ import { FakeBackendInterceptor } from '@core/fake-backend.interceptor';
   imports: [
     // @ngrx
     StoreModule.forFeature('core', reducers),
-    EffectsModule.forFeature([CodebookEffects])
+    EffectsModule.forFeature([CodebookEffects, RouterEffects])
   ],
   declarations: [],
   providers: [
