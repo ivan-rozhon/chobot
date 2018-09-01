@@ -1,7 +1,7 @@
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 // @angular/material
 import { MatIconRegistry } from '@angular/material';
@@ -12,19 +12,23 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router-store';
 
+// @ngx-translate
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 // store
-import { reducers, metaReducers } from './app.state';
+import { reducers, metaReducers } from '@root/app.state';
 
 // modules
 import { CoreModule } from '@core/core.module';
 import { SharedModule } from '@shared/shared.module';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from '@root/app-routing.module';
 
 // services
 import { ConfigService } from '@core/config.service';
 
 // components
-import { AppComponent } from './app.component';
+import { AppComponent } from '@root/app.component';
 
 // utils
 import { CustomRouterStateSerializer } from '@shared/utils/custom-router-state-serializer';
@@ -32,6 +36,12 @@ import { appInitializerFn } from '@shared/utils/app-initializer-fn';
 
 // constants
 import { environment } from '@environments/environment.prod';
+
+// @ngx-translate
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient, `${environment.contextRoot}${environment.assets}/assets/i18n/`, '.json');
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -59,6 +69,15 @@ import { environment } from '@environments/environment.prod';
     // EffectsModule.forRoot() is imported once in the root module and sets up the effects class
     // to be initialized immediately when the application starts.
     EffectsModule.forRoot([]),
+
+    // @ngx-translate
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
 
     // modules
     CoreModule,

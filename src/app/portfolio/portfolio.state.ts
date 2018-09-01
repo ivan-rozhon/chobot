@@ -1,6 +1,6 @@
 import { createSelector, createFeatureSelector, ActionReducerMap } from '@ngrx/store';
 
-import * as fromRoot from '../app.state';
+import * as fromRoot from '@root/app.state';
 import * as fromExchange from '@portfolio/state/exchange.reducer';
 
 export interface PortfolioState {

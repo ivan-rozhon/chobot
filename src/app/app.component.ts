@@ -2,9 +2,12 @@ import { Component } from '@angular/core';
 
 import { Store, select } from '@ngrx/store';
 
+import { TranslateService } from '@ngx-translate/core';
+
 import { Observable } from 'rxjs';
 
 import * as fromRoot from '@root/app.state';
+
 import * as fromCore from '@core/core.state';
 import * as LayoutActions from '@core/state/layout.actions';
 
@@ -16,8 +19,14 @@ import * as LayoutActions from '@core/state/layout.actions';
 export class AppComponent {
   showSidenav$: Observable<boolean>;
 
-  constructor(private store: Store<fromRoot.State>) {
+  constructor(private store: Store<fromRoot.State>, private translate: TranslateService) {
     this.showSidenav$ = this.store.pipe(select(fromCore.getShowSidenav));
+
+    // this language will be used as a fallback when a translation isn't found in the current language
+    this.translate.setDefaultLang('en');
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    this.translate.use('en');
   }
 
   /**
