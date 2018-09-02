@@ -18,6 +18,8 @@ export class ExchangeConfigComponent {
   @Input()
   exchange: Exchange;
   @Input()
+  loading: boolean;
+  @Input()
   codebooks: Codebook[];
 
   @Output()

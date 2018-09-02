@@ -39,6 +39,24 @@ export class DataService {
   }
 
   /**
+   * Main (global) DELETE request method
+   * @param url URL of service
+   * @param params request params (URL params)
+   */
+  delete<T>(url: string, params: object = {}, options: Partial<RequestOptions> = {}): Observable<T> {
+    // update default request options
+    const requestOptions = this.assignRequestOptions(options);
+
+    // define request headers
+    const headers = new HttpHeaders().set('Accept', requestOptions.accept);
+
+    return this.httpClient.delete<T>(this.composeUrl(apiUrl, url), {
+      headers: headers,
+      params: this.composeParams(params)
+    });
+  }
+
+  /**
    * Load application file.
    * @param url URL of requested file (folder).
    */

@@ -11,7 +11,7 @@ export class ExchangeService {
   constructor(private dataService: DataService) {}
 
   /**
-   * exchnageConfig get
+   * Load list of user defined exchange configurations
    * GET '/exchangeConfig'
    * @param exchange New/Updated exchange
    */
@@ -23,7 +23,20 @@ export class ExchangeService {
   }
 
   /**
-   * exchnageConfig create/update
+   * Load one specific exchange configuration by ID
+   * GET '/exchangeConfig'
+   * @param exchangeId ID of requested exchange
+   */
+  getExchange(exchangeId: string): Observable<Exchange> {
+    return this.dataService.get<Exchange>('exchangeConfig', {
+      exchangeId,
+      // TODO: remove (mock)
+      userId: 34
+    });
+  }
+
+  /**
+   * Create new/Update existing exchange configuration
    * PUT '/exchangeConfig'
    * @param exchange New/Updated exchange
    */
@@ -32,6 +45,17 @@ export class ExchangeService {
       ...exchange,
       // TODO: remove (mock)
       userId: 34
+    });
+  }
+
+  /**
+   * Delete exchange configuration by ID
+   * DELETE '/exchangeConfig'
+   * @param exchangeId ID of exchange to delete
+   */
+  deleteExchange(exchangeId: string): Observable<string> {
+    return this.dataService.delete<string>('exchangeConfig', {
+      exchangeId
     });
   }
 }

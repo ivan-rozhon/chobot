@@ -4,14 +4,14 @@
   <button mat-stroked-button color="primary" [routerLink]="['/portfolio']">
     <span>Cancel</span>
   </button>
-  <button mat-raised-button color="primary" [disabled]="configForm.invalid" (click)="onSave(exchange, configFormValue)">
+  <button mat-raised-button color="primary" [disabled]="configForm.invalid || loading" (click)="onSave(exchange, configFormValue)">
     <span>Save</span>
   </button>
 </cc-action-title>
 
 <mat-card>
-  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-  <form [formGroup]="configForm">
+  <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+  <form [formGroup]="configForm" [ccConnectForm]="exchange">
     <cc-form-container>
       <cc-form-block columns="3">
         <cc-form-column columnsPart="2">

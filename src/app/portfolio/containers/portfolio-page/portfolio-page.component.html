@@ -1,1 +1,1 @@
-<cc-exchange-list [exchanges]="exchanges$ | async" [loading]="exchangesLoading$ | async"></cc-exchange-list>
+<cc-exchange-list [exchanges]="exchanges$ | async" [loading]="exchangesLoading$ | async" (delete)="deleteExchange($event)"></cc-exchange-list>

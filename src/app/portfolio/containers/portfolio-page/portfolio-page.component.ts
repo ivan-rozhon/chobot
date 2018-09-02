@@ -24,4 +24,12 @@ export class PortfolioPageComponent {
     // load exchanges
     store.dispatch(new ExchangeActions.LoadList());
   }
+
+  /**
+   * Dispatch action for delete exchange by ID
+   * @param exchangeId ID of exchange to delete
+   */
+  deleteExchange(exchangeId: string): void {
+    this.store.dispatch(new ExchangeActions.DeleteConfig(exchangeId));
+  }
 }

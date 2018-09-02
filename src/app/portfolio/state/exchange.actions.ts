@@ -14,7 +14,13 @@ export enum ExchangeActionTypes {
   // Save Exchange Config
   SaveConfig = '[Exchange] Save Config',
   SaveConfigComplete = '[Exchange] Save Config Complete',
-  SaveConfigFail = '[Exchange] Save Config Fail'
+  SaveConfigFail = '[Exchange] Save Config Fail',
+  // Delete Exchange Config
+  DeleteConfig = '[Exchange] Delete Config',
+  DeleteConfigComplete = '[Exchange] Delete Config Complete',
+  DeleteConfigFail = '[Exchange] Delete Config Fail',
+  // Clear Config
+  ClearConfig = '[Exchange] Clear Config'
 }
 
 // Load Exchange List
@@ -40,10 +46,14 @@ export class LoadListFail implements Action {
 // ===
 export class LoadConfig implements Action {
   readonly type = ExchangeActionTypes.LoadConfig;
+
+  constructor(public payload: string) {}
 }
 
 export class LoadConfigComplete implements Action {
   readonly type = ExchangeActionTypes.LoadConfigComplete;
+
+  constructor(public payload: Exchange) {}
 }
 
 export class LoadConfigFail implements Action {
@@ -72,6 +82,30 @@ export class SaveConfigFail implements Action {
 }
 // ===
 
+// Delete Exchange Config
+// ===
+export class DeleteConfig implements Action {
+  readonly type = ExchangeActionTypes.DeleteConfig;
+
+  constructor(public payload: string) {}
+}
+
+export class DeleteConfigComplete implements Action {
+  readonly type = ExchangeActionTypes.DeleteConfigComplete;
+}
+
+export class DeleteConfigFail implements Action {
+  readonly type = ExchangeActionTypes.DeleteConfigFail;
+
+  constructor(public payload: any) {}
+}
+// ===
+
+// Clear Config
+export class ClearConfig implements Action {
+  readonly type = ExchangeActionTypes.ClearConfig;
+}
+
 export type ExchangeActions =
   | LoadList
   | LoadListComplete
@@ -81,4 +115,8 @@ export type ExchangeActions =
   | LoadConfigFail
   | SaveConfig
   | SaveConfigComplete
-  | SaveConfigFail;
+  | SaveConfigFail
+  | DeleteConfig
+  | DeleteConfigComplete
+  | DeleteConfigFail
+  | ClearConfig;

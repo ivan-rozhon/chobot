@@ -1,1 +1,2 @@
-<cc-exchange-config [exchange]="exchange$ | async" [codebooks]="codebooks$ | async" (save)="saveExchange($event)"></cc-exchange-config>
+<cc-exchange-config [exchange]="exchange$ | async" [loading]="exchangeLoading$ | async" [codebooks]="codebooks$ | async"
+  (save)="saveExchange($event)"></cc-exchange-config>

@@ -58,7 +58,7 @@ import { CardColumnComponent } from './components/card-column/card-column.compon
 import { FormFieldComponent } from './components/form-field/form-field.component';
 
 // directives
-// ...
+import { ConnectFormDirective } from '@shared/directives/connect-form.directive';
 
 @NgModule({
   imports: [
@@ -118,9 +118,9 @@ import { FormFieldComponent } from './components/form-field/form-field.component
     FormTitleComponent,
     CardRowComponent,
     CardColumnComponent,
-    FormFieldComponent
+    FormFieldComponent,
     // directives
-    // ...
+    ConnectFormDirective
   ],
   exports: [
     // @angular
@@ -176,9 +176,9 @@ import { FormFieldComponent } from './components/form-field/form-field.component
     FormTitleComponent,
     CardRowComponent,
     CardColumnComponent,
-    FormFieldComponent
+    FormFieldComponent,
     // directives
-    // ...
+    ConnectFormDirective
   ]
 })
 export class SharedModule {}

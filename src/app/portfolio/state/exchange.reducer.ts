@@ -47,6 +47,58 @@ export function reducer(state = initialState, action: ExchangeActions): State {
     }
     // ===
 
+    // Load Exchange Config
+    // ===
+    case ExchangeActionTypes.LoadConfig: {
+      return {
+        ...state,
+        exchangeLoading: true
+      };
+    }
+
+    case ExchangeActionTypes.LoadConfigComplete: {
+      return {
+        ...state,
+        exchangeLoading: false,
+        exchange: action.payload
+      };
+    }
+
+    case ExchangeActionTypes.LoadConfigFail: {
+      return {
+        ...state,
+        exchangeLoading: false,
+        exchange: initialState.exchange
+      };
+    }
+    // ===
+
+    // Save Exchange Config
+    // ===
+    case ExchangeActionTypes.SaveConfig: {
+      return {
+        ...state,
+        exchangeLoading: true
+      };
+    }
+
+    case ExchangeActionTypes.SaveConfigComplete:
+    case ExchangeActionTypes.SaveConfigFail: {
+      return {
+        ...state,
+        exchangeLoading: false
+      };
+    }
+    // ===
+
+    // Clear Config
+    case ExchangeActionTypes.ClearConfig: {
+      return {
+        ...state,
+        exchange: initialState.exchange
+      };
+    }
+
     default:
       return state;
   }

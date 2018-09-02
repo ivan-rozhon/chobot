@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Exchange } from '@portfolio/shared/models';
 
@@ -15,5 +15,16 @@ export class ExchangeListComponent {
   @Input()
   loading: boolean;
 
+  @Output()
+  delete = new EventEmitter<string>();
+
   constructor() {}
+
+  /**
+   * Delete exchange by ID (emit event)
+   * @param id ID of the exchange
+   */
+  onDelete(id: string): void {
+    this.delete.emit(id);
+  }
 }
