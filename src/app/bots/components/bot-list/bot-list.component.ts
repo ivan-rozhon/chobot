@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Bot } from '@bots/shared/models';
 
@@ -8,11 +8,12 @@ import { Bot } from '@bots/shared/models';
   styleUrls: ['./bot-list.component.scss']
 })
 export class BotListComponent {
-  bots: Bot[];
   displayedColumns: string[] = ['name', 'pairs', 'exchange', 'positions', 'performance', 'active', 'actions'];
 
-  constructor() {
-    // TODO: remove (mock)
-    this.bots = [{ name: 'Chobot', exchange: 'Binance' }] as Bot[];
-  }
+  @Input()
+  bots: Bot[];
+  @Input()
+  loading: boolean;
+
+  constructor() {}
 }

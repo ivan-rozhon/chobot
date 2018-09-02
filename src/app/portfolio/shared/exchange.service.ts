@@ -13,7 +13,6 @@ export class ExchangeService {
   /**
    * Load list of user defined exchange configurations
    * GET '/exchangeConfig'
-   * @param exchange New/Updated exchange
    */
   getExchangeList(): Observable<Exchange[]> {
     return this.dataService.get<Exchange[]>('exchangeConfig', {

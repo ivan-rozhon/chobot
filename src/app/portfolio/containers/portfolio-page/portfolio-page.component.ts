@@ -14,10 +14,12 @@ import { Exchange } from '@portfolio/shared/models';
   styleUrls: ['./portfolio-page.component.scss']
 })
 export class PortfolioPageComponent {
+  // Store selectors:
   exchanges$: Observable<Exchange[]>;
   exchangesLoading$: Observable<boolean>;
 
   constructor(private store: Store<fromPortfolio.State>) {
+    // Assign store selectors:
     this.exchanges$ = store.pipe(select(fromPortfolio.getExchanges));
     this.exchangesLoading$ = store.pipe(select(fromPortfolio.getExchangesLoading));
 

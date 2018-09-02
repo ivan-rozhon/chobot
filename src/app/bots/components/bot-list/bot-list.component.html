@@ -7,6 +7,8 @@
 </cc-action-title>
 
 <div class="mat-elevation-z6">
+  <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
   <table mat-table [dataSource]="bots">
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Name</th>
