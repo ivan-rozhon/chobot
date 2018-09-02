@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 
 import { Store, select } from '@ngrx/store';
 
@@ -19,6 +19,7 @@ import { Exchange } from '@portfolio/shared/models';
   selector: 'cc-exchange-config-page',
   templateUrl: './exchange-config-page.component.html',
   styleUrls: ['./exchange-config-page.component.scss']
+  // changeDetection: ChangeDetectionStrategy.OnPush // TODO... enable OnPush -> performance increase!
 })
 export class ExchangeConfigPageComponent implements OnDestroy {
   // Store selectors:

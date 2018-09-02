@@ -6,12 +6,12 @@ import { FormGroupDirective } from '@angular/forms';
 })
 export class ConnectFormDirective {
   @Input('ccConnectForm')
-  set data(val: any) {
-    if (val) {
+  set data(value: any) {
+    if (value) {
       // wait a tick to prevent 'ExpressionChangedAfterItHasBeenCheckedError'
       Promise.resolve().then(() => {
         // if value exists, patch form with it
-        this.formGroupDirective.form.patchValue(val);
+        this.formGroupDirective.form.patchValue(value);
         this.formGroupDirective.form.markAsPristine();
       });
     }

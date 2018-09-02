@@ -16,12 +16,12 @@
       <cc-form-block columns="3">
         <cc-form-column columnsPart="2">
           <mat-form-field>
-            <input type="text" matInput placeholder="Name" formControlName="name" required>
+            <input type="text" matInput placeholder="Name" formControlName="name" required [ccDisableControl]="loading">
           </mat-form-field>
         </cc-form-column>
 
         <mat-form-field>
-          <mat-select placeholder="Exchange" formControlName="type" required>
+          <mat-select placeholder="Exchange" formControlName="type" required [ccDisableControl]="loading">
             <mat-option *ngFor="let item of codebookService.getCodebook('exchange', codebooks)" [value]="item.key">
               {{ item.value }}
             </mat-option>
@@ -31,13 +31,13 @@
 
       <cc-form-block columns="1">
         <mat-form-field>
-          <input type="text" matInput placeholder="Api key" formControlName="apiKey" required>
+          <input type="text" matInput placeholder="Api key" formControlName="apiKey" required [ccDisableControl]="loading">
         </mat-form-field>
       </cc-form-block>
 
       <cc-form-block columns="1">
         <mat-form-field>
-          <input type="text" matInput placeholder="Secret key" formControlName="apiSecret" [required]="!exchangeId">
+          <input type="text" matInput placeholder="Secret key" formControlName="apiSecret" [required]="!exchangeId" [ccDisableControl]="exchangeId || loading">
         </mat-form-field>
       </cc-form-block>
     </cc-form-container>
